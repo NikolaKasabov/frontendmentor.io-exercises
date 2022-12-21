@@ -6,15 +6,31 @@
 
 :root {
   --primary-color: #fd53c0;
+  --secondary-text-color: #8d9397;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open sans", sans-serif;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.primary-btn {
+  padding: 1.7rem 5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.primary-btn:active {
+  opacity: 0.5;
 }
 
 .main-header {
@@ -53,7 +69,62 @@ body {
   opacity: 0.5;
 }
 
+.section1 {
+  padding: 100px 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.section1 h1 {
+  font-size: 2.5rem;
+}
+
+.section1 p {
+  max-width: 520px;
+}
+
+.section2 {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section2 .image {
+  max-width: 900px;
+  width: 100%;
+}
+
+.section2 .info {
+  margin-top: 115px;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-around;
+}
+
+.section2 .info .info-item .icon {
+  width: 40px;
+}
+
+.section2 .info .info-item .number {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.section2 .info .info-item .text {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+}
+
 @media (max-width: 500px) {
+  .primary-btn {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+  }
+
   .main-header {
     padding: 1.5rem;
   }
@@ -65,5 +136,25 @@ body {
 
   .main-header button {
     padding: 0.3rem 0.9rem;
+  }
+
+  .section1 {
+    padding: 100px 1rem;
+  }
+
+  .section2 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .section2 .info {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .section2 .info .info-item {
+    transform: scale(1.2);
   }
 }
