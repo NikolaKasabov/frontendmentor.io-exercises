@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -105,23 +106,46 @@
       </section>
     </main>
 
+    <footer class="footer">
+      <picture>
+        <source media="(min-width: 650px)" srcset="./images/bg-footer-top-desktop.svg">
+        <img src="./images/bg-footer-top-mobile.svg" alt="">
+      </picture>
+
+      <div class="flex-container">
+        <div class="contacts">
+          <div class="logo">
+            <img src="./images/icon-messages.svg" class="icon">
+            <span class="logo-text">Huddle</span>
+          </div>
+          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.</p>
+          <div class="phone">
+            <img src="./images/icon-phone.svg" alt="">
+            <span>Phone: +1-543-123-4567</span>
+          </div>
+          <div class="email">
+            <img src="./images/icon-email.svg" alt="">
+            <span>example@huddle.com</span>
+          </div>
+          <div class="icons">
+            <i class="fa-brands fa-square-facebook fa-2xl"></i>
+            <i class="fa-brands fa-instagram fa-2xl"></i>
+            <i class="fa-brands fa-square-twitter fa-2xl"></i>
+          </div>
+        </div>
+        
+        <div class="newsletter">
+          <h2 class="title">Newsletter</h2>
+          <p class="text">To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address</p>
+          <form class="form">
+            <input type="text">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
   </div>
-
-
-  <!--  
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
-  vestibulum a, ultrices quis sem.
-  
-  Phone: +1-543-123-4567
-  example@huddle.com
-
-  Newsletter
-  To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
-  send you spam or pass on your email address
-
-  Subscribe 
--->
 
 </body>
 

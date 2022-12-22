@@ -13,6 +13,11 @@ body {
   font-family: "Open sans", sans-serif;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -48,6 +53,7 @@ body {
 
 .main-header .left .icon {
   width: 40px;
+  filter: invert(54%) sepia(33%) saturate(3875%) hue-rotate(291deg) brightness(97%) contrast(106%);
 }
 
 .main-header .left .logo-text {
@@ -125,12 +131,6 @@ body {
 }
 
 /* SECTION 3 and SECTION 5 */
-.section3 img,
-.section5 img {
-  width: 100%;
-  display: block;
-}
-
 .section3 .flex-container,
 .section5 .flex-container {
   display: flex;
@@ -169,11 +169,6 @@ body {
   flex: 0 0 50%;
 }
 
-.section4 img {
-  display: block;
-  width: 100%;
-}
-
 .section4 .text {
   padding: 0 4vw;
 }
@@ -185,6 +180,106 @@ body {
 .section4 .text p {
   font-size: 0.9rem;
   margin-top: 2rem;
+}
+
+/* FOOTER */
+.footer {
+  color: #fff;
+}
+
+.footer .flex-container {
+  background-color: #00252e;
+  padding: 90px 5vw;
+  display: flex;
+}
+
+.footer .flex-container > * {
+  flex: 0 1 50%;
+}
+
+.footer .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.footer .contacts .text {
+  max-width: 260px;
+}
+
+.footer .contacts .logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer .contacts .logo .icon {
+  width: 40px;
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(97deg) brightness(102%) contrast(101%);
+}
+
+.footer .contacts .logo .logo-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.footer .contacts .phone,
+.footer .contacts .email {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer .contacts .phone img,
+.footer .contacts .email img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.footer .contacts .icons {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.footer .newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer .newsletter .title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.footer .newsletter .text {
+  font-size: 0.8rem;
+  max-width: 300px;
+}
+
+.footer .newsletter form {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer .newsletter input {
+  padding: 0.8rem;
+  width: 280px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer .newsletter button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
 }
 
 /* MEDIA QUERIES */
@@ -252,5 +347,19 @@ body {
 
   .section4 .text {
     text-align: center;
+  }
+
+  .footer .flex-container {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 50px 5vw;
+  }
+
+  .footer .flex-container .contacts {
+    order: 2;
+  }
+
+  .footer .flex-container .newsletter {
+    order: 1;
   }
 }
