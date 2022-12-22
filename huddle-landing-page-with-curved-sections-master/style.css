@@ -69,8 +69,9 @@ body {
   opacity: 0.5;
 }
 
-/* SECTION 1 */
-.section1 {
+/* SECTION 1 and SECTION 6 */
+.section1,
+.section6 {
   padding: 100px 5rem;
   text-align: center;
   display: flex;
@@ -79,11 +80,13 @@ body {
   gap: 3rem;
 }
 
-.section1 h1 {
+.section1 h2,
+.section6 h2 {
   font-size: 2.5rem;
 }
 
-.section1 p {
+.section1 p,
+.section6 p {
   max-width: 520px;
 }
 
@@ -121,33 +124,67 @@ body {
   color: var(--secondary-text-color);
 }
 
-/* SECTION 3 */
-.section3 img {
+/* SECTION 3 and SECTION 5 */
+.section3 img,
+.section5 img {
   width: 100%;
   display: block;
 }
 
-.section3 .flex-container {
+.section3 .flex-container,
+.section5 .flex-container {
   display: flex;
   align-items: center;
-  background-color: #F6FBFF;
+  background-color: #f6fbff;
 }
 
-.section3 .flex-container .text {
+.section3 .flex-container .text,
+.section5 .flex-container .text {
   padding: 0 4vw;
 }
 
-.section3 .flex-container .text h2 {
+.section3 .flex-container .text h2,
+.section5 .flex-container .text h2 {
   font-size: 2rem;
 }
 
-.section3 .flex-container .text p {
+.section3 .flex-container .text p,
+.section5 .flex-container .text p {
   font-size: 0.9rem;
   margin-top: 2rem;
 }
 
-.section3 .flex-container > * {
+.section3 .flex-container > *,
+.section5 .flex-container > * {
   flex: 0 0 50%;
+}
+
+/* SECTION 4 */
+.section4 {
+  display: flex;
+  align-items: center;
+}
+
+.section4 > * {
+  flex: 0 0 50%;
+}
+
+.section4 img {
+  display: block;
+  width: 100%;
+}
+
+.section4 .text {
+  padding: 0 4vw;
+}
+
+.section4 .text h2 {
+  font-size: 2rem;
+}
+
+.section4 .text p {
+  font-size: 0.9rem;
+  margin-top: 2rem;
 }
 
 /* MEDIA QUERIES */
@@ -170,7 +207,8 @@ body {
     padding: 0.3rem 0.9rem;
   }
 
-  .section1 {
+  .section1,
+  .section6 {
     padding: 100px 1rem;
   }
 
@@ -190,17 +228,29 @@ body {
     transform: scale(1.2);
   }
 
-  .section3 .flex-container {
+  .section3 .flex-container,
+  .section5 .flex-container {
     flex-direction: column;
     gap: 5rem;
   }
 
-  .section3 .flex-container .text {
+  .section3 .flex-container .text,
+  .section5 .flex-container .text {
     order: 2;
     text-align: center;
   }
 
-  .section3 .flex-container .image {
+  .section3 .flex-container .image,
+  .section5 .flex-container .image {
     order: 1;
+  }
+
+  .section4 {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .section4 .text {
+    text-align: center;
   }
 }
