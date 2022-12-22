@@ -118,6 +118,7 @@ img {
 
 .section2 .info .info-item .icon {
   width: 40px;
+  filter: invert(54%) sepia(33%) saturate(3875%) hue-rotate(291deg) brightness(97%) contrast(106%);
 }
 
 .section2 .info .info-item .number {
