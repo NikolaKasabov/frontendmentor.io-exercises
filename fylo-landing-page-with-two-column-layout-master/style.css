@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #2f65f9;
+  --error-color: #dd456e;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.primary-button {
+  height: 40px;
+  padding: 0 3rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.error {
+  display: none;
+}
+
+.error.open {
+  display: block;
+}
+
+.red-border {
+  border-color: var(--error-color) !important;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.main-header {
+  padding: 60px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Raleway", sans-serif;
+}
+
+.main-header .logo {
+  width: 145px;
+}
+
+.main-header .links {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.main-header .links a {
+  text-decoration: none;
+  color: black;
+}
+
+/* SECTION 1 */
+.section1 {
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+}
+
+.section1 > * {
+  flex: 1;
+}
+
+.section1 .info .title {
+  font-size: 2.2rem;
+  line-height: 1.4;
+}
+
+.section1 .info .text {
+  margin: 30px 0 25px 0;
+  width: 90%;
+}
+
+.section1 .info form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section1 .info .input-wrapper {
+  position: relative;
+}
+
+.section1 .info .input-wrapper .error {
+  position: absolute;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: var(--error-color);
+}
+
+.section1 .info input {
+  padding-left: 0.7rem;
+  width: 275px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 600px) {
+  .main-header {
+    padding: 30px 24px;
+  }
+
+  .main-header .logo {
+    width: 80px;
+  }
+
+  .main-header .links {
+    gap: 10px;
+  }
+
+  .section1 {
+    padding: 0 24px;
+  }
+
+  .section1 .info form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .section1 {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .section1 .info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+  }
+
+  .section1 .image {
+    order: 1;
+  }
+}
