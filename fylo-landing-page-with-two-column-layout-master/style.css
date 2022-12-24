@@ -39,6 +39,14 @@ img {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.primary-button:active {
+  opacity: 0.5;
+}
+
+input.red-border:focus {
+  outline: 1px solid red;
+}
+
 .error {
   display: none;
 }
@@ -126,6 +134,88 @@ img {
   border-radius: 3px;
 }
 
+/* SECTION 2 */
+.section2 {
+  margin-top: 140px;
+}
+
+.section2 .flex-container {
+  padding: 100px 70px;
+  background-color: #F9F8FE;
+  display: flex;
+}
+
+.section2 .flex-container > * {
+  flex: 1;
+}
+
+.section2 .info h2 {
+  font-size: 2.2rem;
+}
+
+.section2 .info > p {
+  margin-top: 35px;
+  max-width: 455px;
+  font-size: 0.9rem;
+}
+
+.section2 .info > p:nth-of-type(2) {
+  margin-top: 25px;
+}
+
+.section2 .info a {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #3c9f8f;
+  border-bottom: 1px solid #3c9f8f;
+  font-size: 0.9rem;
+}
+
+.section2 .info a img {
+  width: 15px;
+}
+
+.section2 .info .card {
+  margin-top: 40px;
+  max-width: 310px;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.section2 .info .card .icon {
+  width: 16px;
+}
+
+.section2 .info .card > p {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+.section2 .info .card .ceo-info {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.section2 .info .card .ceo-info img {
+  border-radius: 50%;
+  width: 30px;
+}
+
+.section2 .info .card .ceo-info .text h4 {
+  font-size: 0.8rem;
+}
+
+.section2 .info .card .ceo-info .text p {
+  font-size: 0.7rem;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 600px) {
   .main-header {
@@ -149,6 +239,10 @@ img {
     align-items: stretch;
     gap: 2rem;
   }
+
+  .section2 .flex-container {
+    padding: 100px 24px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -166,6 +260,27 @@ img {
   }
 
   .section1 .image {
+    order: 1;
+  }
+
+  .section2 .flex-container {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .section2 .flex-container .info {
+    order: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section2 .flex-container .info .card {
+    text-align: left;
+  }
+
+  .section2 .flex-container .image {
     order: 1;
   }
 }
