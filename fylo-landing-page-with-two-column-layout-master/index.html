@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
   <link rel="stylesheet" href="style.css">
@@ -79,29 +83,66 @@
         </div>
       </div>
     </section>
+
+    <section class="section3">
+      <div class="text">
+        <h3>Get early access today</h3>
+        <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+      </div>
+
+      <form class="form2">
+        <div class="input-wrapper">
+          <input type="text" placeholder="email@example.com">
+          <div class="error">Please check your email</div>
+        </div>
+        <button class="primary-button" type="submit">Get Started For Free</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="logo">
+        <img src="./images/logo-white.svg" alt="fylo logo">
+      </div>
+
+      <div class="flex-container">
+        <div class="contacts">
+          <div class="phone">
+            <img src="./images/icon-phone.svg" alt="phone icon">
+            <p>Phone: +1-543-123-4567</p>
+          </div>
+          <div class="email">
+            <img src="./images/icon-email.svg" alt="email icon">
+            <p>example@fylo.com</p>
+          </div>
+        </div>
+
+        <ul class="links1">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+
+        <ul class="links2">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+
+        <div class="icons">
+          <a href="#" class="icon">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="icon">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="icon">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
-
-  <!-- 
-
-  Get early access today
-
-  It only takes a minute to sign up and our free starter tier is extremely generous.
-  If you have any questions, our support team would be happy to help you.
-
-  Get Started For Free
-
-  Phone: +1-543-123-4567
-  example@fylo.com
-
-  About Us
-  Jobs
-  Press
-  Blog
-
-  Contact Us
-  Terms
-  Privacy 
-  -->
 
   <script src="app.js"></script>
 </body>
