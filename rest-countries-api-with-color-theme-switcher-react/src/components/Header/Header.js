@@ -1,11 +1,10 @@
-import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 import './Header.scss';
+import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 
 function Header() {
-
   return (
-    <header className='main-header'>
-      <h2>Where in the world?</h2>
+    <header className='header-wrapper'>
+      <h2 className='header-title'>Where in the world?</h2>
       <ThemeSwitch />
     </header>
   );

@@ -1,0 +1,30 @@
+.card-wrapper {
+  // max-width: 230px;
+  background-color: var(--background-color-2);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .card-img {
+    display: block;
+    width: 100%;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-info {
+    padding: 26px 24px 40px 24px;
+
+    .card-details {
+      margin-top: 20px;
+      font-size: 0.8rem;
+
+      & > *:not(:last-child) {
+        margin-bottom: 4px;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}

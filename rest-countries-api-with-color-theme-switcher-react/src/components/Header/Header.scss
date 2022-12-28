@@ -1,4 +1,4 @@
-.main-header {
+.header-wrapper {
   padding: 20px 70px;
   display: flex;
   align-items: center;
@@ -6,4 +6,12 @@
   background-color: var(--background-color-2);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   clip-path: inset(0px 0px -5px 0px);
+
+  @media (max-width: 600px) {
+    padding: 20px 16px;
+
+    .header-title {
+      font-size: 1rem;
+    }
+  }
 }

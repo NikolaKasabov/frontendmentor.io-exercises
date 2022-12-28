@@ -1,4 +1,13 @@
 .App {
   max-width: 1440px;
   margin: 0 auto;
+
+  .cards-container {
+    margin-top: 40px;
+    padding: 0 70px;
+
+    @media(max-width: 600px) {
+      padding: 0 55px;  
+    }
+  }
 }

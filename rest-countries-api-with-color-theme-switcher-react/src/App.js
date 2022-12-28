@@ -2,6 +2,8 @@ import './App.scss';
 import { useEffect, useState } from 'react';
 import useFetch from './useFetch';
 import Header from './components/Header/Header';
+import Card from './components/Card/Card';
+import Cards from './components/Cards/Cards';
 
 
 function App() {
@@ -21,6 +23,11 @@ function App() {
       <Header />
 
       {isLoading && 'Loading...'}
+      {filteredData && (
+        <section className="cards-container">
+          <Cards data={filteredData} />
+        </section>
+      )}
     </div>
   );
 }
