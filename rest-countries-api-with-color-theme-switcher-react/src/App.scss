@@ -2,12 +2,23 @@
   max-width: 1440px;
   margin: 0 auto;
 
+  .filters-wrapper {
+    margin-top: 40px;
+    padding: 0 70px;
+  }
+
   .cards-container {
     margin-top: 40px;
     padding: 0 70px;
+  }
 
-    @media(max-width: 600px) {
-      padding: 0 55px;  
+  @media (max-width: 600px) {
+    .filters-wrapper {
+      padding: 0 16px;
+    }
+
+    .cards-container {
+      padding: 0 55px;
     }
   }
 }
