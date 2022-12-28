@@ -1,21 +1,26 @@
 import './App.scss';
 import { useEffect, useState } from 'react';
 import useFetch from './useFetch';
-import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
+import Header from './components/Header/Header';
 
 
 function App() {
   const { data, fetchData, isLoading } = useFetch();
+  const [filteredData, setFilteredData] = useState(data);
 
   useEffect(() => {
     fetchData('https://restcountries.com/v3.1/all');
   }, [fetchData]);
 
+  useEffect(() => { 
+    setFilteredData(data);
+  }, [data]);
+
   return (
     <div className="App">
-      123
+      <Header />
 
-      <ThemeSwitch />
+      {isLoading && 'Loading...'}
     </div>
   );
 }

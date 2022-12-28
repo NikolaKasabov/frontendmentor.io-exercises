@@ -21,8 +21,8 @@ function ThemeSwitch() {
   return (
     <button onClick={clickHandler} className='theme-btn'>
       {isDarkTheme
-        ? <><BsSun /> Light Theme</>
-        : <><BsMoon /> Dark Theme</>}
+        ? <><BsSun /> Light Mode</>
+        : <><BsMoon /> Dark Mode</>}
     </button>
   );
 }
