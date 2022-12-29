@@ -2,6 +2,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 65px;
+  
+  &.few-elements {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 300px));
+    justify-content: center;
+  }
 
   @media (max-width: 600px) {
     gap: 38px;

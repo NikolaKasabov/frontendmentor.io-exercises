@@ -3,7 +3,7 @@ import './Cards.scss';
 
 function Cards({ data }) {
   return (
-    <div className='cards-wrapper'>
+    <div className={`cards-wrapper ${data.length < 4 ? 'few-elements' : ''}`}>
       {data.map(country => {
         return (
           <Card
