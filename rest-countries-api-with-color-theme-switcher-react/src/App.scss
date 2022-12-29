@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
   }
 
   .cards-container {
@@ -21,6 +21,7 @@
       padding: 0 16px;
       flex-direction: column;
       align-items: flex-start;
+      gap: 30px;
     }
 
     .cards-container {

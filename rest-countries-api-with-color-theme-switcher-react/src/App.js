@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Cards from './components/Cards/Cards';
 import RegionSelect from './components/RegionSelect/RegionSelect';
 import Search from './components/Search/Search';
+import Loader from './components/Loader/Loader';
 
 
 function App() {
@@ -40,6 +41,8 @@ function App() {
 
   return (
     <div className="App">
+      {isLoading && <Loader />}
+      
       <Header />
 
       <section className="filters-wrapper">
@@ -50,7 +53,6 @@ function App() {
         <RegionSelect onChange={ev => setSelectedRegion(ev.target.value)} />
       </section>
 
-      {isLoading && 'Loading...'}
       {filteredData && (
         <section className="cards-container">
           <Cards data={filteredData} />
