@@ -1,11 +1,13 @@
 import './App.scss';
 import { useEffect, useState } from 'react';
 import useFetch from './useFetch';
+import { HiArrowNarrowLeft } from "react-icons/hi";
 import Header from './components/Header/Header';
 import Cards from './components/Cards/Cards';
 import RegionSelect from './components/RegionSelect/RegionSelect';
 import Search from './components/Search/Search';
 import Loader from './components/Loader/Loader';
+import CountryDetails from './components/CountryDetails/CountryDetails';
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
   const [filteredData, setFilteredData] = useState(data);
   const [selectedRegion, setSelectedRegion] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState(null);
 
   useEffect(() => {
     fetchData('https://restcountries.com/v3.1/all');
@@ -39,25 +42,42 @@ function App() {
     setFilteredData(newData);
   }, [selectedRegion, searchTerm]);
 
+  function onCardClick(country) {
+    setSelectedCountry(country);
+  }
+
   return (
     <div className="App">
       {isLoading && <Loader />}
-      
+
       <Header />
 
-      <section className="filters-wrapper">
-        <Search value={searchTerm}
-          onChange={ev => setSearchTerm(ev.target.value)}
-          onClear={() => setSearchTerm('')}
-        />
-        <RegionSelect onChange={ev => setSelectedRegion(ev.target.value)} />
-      </section>
+      {selectedCountry
+        ? (
+          <section className="country-details-container">
+            <button className='clear-selected-country-btn' onClick={() => setSelectedCountry(null)}>
+              <HiArrowNarrowLeft className='clear-btn-icon' /> Back
+            </button>
+              <CountryDetails country={selectedCountry} />
+            </section>
+        ) : (
+          <>
+            <section className="filters-container">
+              <Search value={searchTerm}
+                onChange={ev => setSearchTerm(ev.target.value)}
+                onClear={() => setSearchTerm('')}
+              />
+              <RegionSelect onChange={ev => setSelectedRegion(ev.target.value)} />
+            </section>
 
-      {filteredData && (
-        <section className="cards-container">
-          <Cards data={filteredData} />
-        </section>
-      )}
+            {filteredData && (
+              <section className="cards-container">
+                <Cards data={filteredData} onCardClick={onCardClick} />
+              </section>
+            )}
+          </>
+        )
+      }
     </div>
   );
 }

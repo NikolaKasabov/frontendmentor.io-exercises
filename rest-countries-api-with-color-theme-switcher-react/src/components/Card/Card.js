@@ -1,9 +1,9 @@
 import './Card.scss';
 
-function Card({ flag, name, population, region, capital }) {
+function Card({ flag, name, population, region, capital, onClick }) {
   
   return (
-    <div className="card-wrapper">
+    <div className="card-wrapper" onClick={onClick}>
       <img className='card-img' src={flag} alt="flag" />
       <div className="card-info">
         <h4 className="card-title">{name}</h4>

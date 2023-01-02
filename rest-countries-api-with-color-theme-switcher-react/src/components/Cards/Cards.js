@@ -1,7 +1,7 @@
 import Card from '../Card/Card';
 import './Cards.scss';
 
-function Cards({ data }) {
+function Cards({ data, onCardClick }) {
   return (
     <div className={`cards-wrapper ${data.length < 4 ? 'few-elements' : ''}`}>
       {data.map(country => {
@@ -13,6 +13,7 @@ function Cards({ data }) {
             population={country?.population}
             region={country?.region}
             capital={country?.capital && country?.capital[0]}
+            onClick={() => { onCardClick(country) }}
           />
         );
       })}

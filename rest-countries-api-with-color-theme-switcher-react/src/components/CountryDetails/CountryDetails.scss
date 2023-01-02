@@ -1,0 +1,44 @@
+.country-details-wrapper {
+  display: flex;
+  gap: 5vw;
+
+  & > * {
+    flex: 1;
+  }
+
+  .image img {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .info {
+    .info-name {
+      margin-top: 35px;
+      font-size: 1.8rem;
+    }
+
+    .info-flex-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+
+      .info-flex-item {
+        & > * {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 1000px) {
+    flex-direction: column;
+
+    .info-flex-container {
+      padding-bottom: 50px;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+}
