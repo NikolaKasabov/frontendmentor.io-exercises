@@ -58,8 +58,8 @@ function App() {
             <button className='clear-selected-country-btn' onClick={() => setSelectedCountry(null)}>
               <HiArrowNarrowLeft className='clear-btn-icon' /> Back
             </button>
-              <CountryDetails country={selectedCountry} />
-            </section>
+            <CountryDetails country={selectedCountry} />
+          </section>
         ) : (
           <>
             <section className="filters-container">
@@ -67,7 +67,9 @@ function App() {
                 onChange={ev => setSearchTerm(ev.target.value)}
                 onClear={() => setSearchTerm('')}
               />
-              <RegionSelect onChange={ev => setSelectedRegion(ev.target.value)} />
+              <RegionSelect value={selectedRegion}
+                onChange={ev => setSelectedRegion(ev.target.value)}
+              />
             </section>
 
             {filteredData && (

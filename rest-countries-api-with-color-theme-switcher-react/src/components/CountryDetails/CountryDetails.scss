@@ -23,6 +23,7 @@
       margin-top: 30px;
       display: flex;
       justify-content: space-between;
+      gap: 10px;
 
       .info-flex-item {
         & > * {
@@ -38,7 +39,7 @@
     .info-flex-container {
       padding-bottom: 50px;
       flex-direction: column;
-      gap: 40px;
+      gap: 40px !important;
     }
   }
 }
