@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #4c545d;
+  --text-color-light: #9fabb2;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-header {
+  padding: 130px 0 50px 0;
+  background: url("./images/bg-header-desktop.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
