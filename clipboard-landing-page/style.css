@@ -16,6 +16,8 @@ body {
   color: var(--text-color);
   font-size: 18px;
   text-align: center;
+
+  padding-bottom: 200px;
 }
 
 .light {
@@ -56,7 +58,6 @@ p {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 /* HEADER */
@@ -104,12 +105,15 @@ p {
   margin-top: 85px;
   display: flex;
   align-items: center;
-
-  margin-bottom: 100px;
 }
 
 .section2 > * {
   flex: 0 0 50%;
+}
+
+.section2 .image {
+  overflow: hidden;
+  padding-bottom: 20px;
 }
 
 .section2 .image img {
@@ -119,7 +123,6 @@ p {
 }
 
 .section2 .text {
-  padding-left: 110px;
   padding-left: 5.5vw;
   text-align: left;
 }
@@ -132,6 +135,31 @@ p {
   max-width: 335px;
   margin-top: 20px;
   font-size: 1rem;
+}
+
+/* SECTION 3 */
+.section3 {
+  margin-top: 160px;
+}
+
+.section3 h2 {
+  font-size: 2rem;
+}
+
+.section3 h2:nth-of-type(2) {
+  margin-top: 100px;
+}
+
+.section3 p {
+  margin: 2rem auto 0 auto;
+  max-width: 670px;
+  font-size: 1.1rem;
+}
+
+.section3 img {
+  margin-top: 115px;
+  width: 100%;
+  max-width: 810px;
 }
 
 @media (max-width: 700px) {
@@ -171,5 +199,10 @@ p {
 
   .section2 .text {
     text-align: center;
+    padding-left: 0;
+  }
+
+  .section3 {
+    padding: 0 1rem;
   }
 }
