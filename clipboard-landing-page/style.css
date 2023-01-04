@@ -5,8 +5,8 @@
 }
 
 :root {
-  --primary-color: rgb(38, 186, 164);
-  --secondary-color: rgb(97, 115, 255);
+  --primary-color: #26baa4;
+  --secondary-color: #6173ff;
   --text-color: #4c545d;
   --text-color-light: #9fabb2;
 }
@@ -16,8 +16,6 @@ body {
   color: var(--text-color);
   font-size: 18px;
   text-align: center;
-
-  padding-bottom: 200px;
 }
 
 .light {
@@ -36,8 +34,12 @@ body {
   border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
 
+.btn:hover {
+  opacity: 0.7;
+}
+
 .btn:active {
-  opacity: 0.6;
+  transform: scale(0.98);
 }
 
 .ios-btn {
@@ -53,6 +55,19 @@ body {
 p {
   color: var(--text-color-light);
   line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--primary-color);
 }
 
 .container {
@@ -205,11 +220,71 @@ p {
   justify-content: space-between;
 }
 
+/* SECTION 5 */
+.section5 {
+  margin-top: 170px;
+}
+
+.section5 h2 {
+  font-size: 2rem;
+}
+
+.section5 p {
+  margin: 30px auto 0 auto;
+  max-width: 680px;
+}
+
+.section5 .buttons-container {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 150px;
+  padding: 40px 165px 45px 165px;
+  background-color: #f5f6f8;
+  display: flex;
+}
+
+.footer .logo {
+  width: 55px;
+  height: 55px;
+}
+
+.footer .links {
+  margin-left: 135px;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .links li {
+  margin-bottom: 26px;
+  width: 190px;
+  text-align: left;
+}
+
+.footer .icons {
+  align-self: flex-start;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.footer .icons a:hover img {
+  filter: invert(51%) sepia(80%) saturate(400%) hue-rotate(121deg) brightness(103%) contrast(87%);
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 700px) {
   .section1,
   .section3,
-  .section4 {
+  .section4,
+  .section5 {
     padding: 0 1rem;
   }
 
@@ -221,16 +296,19 @@ p {
     font-size: 1rem;
   }
 
-  .section1 .buttons-container {
+  .section1 .buttons-container,
+  .section5 .buttons-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .section1 .btn {
+  .section1 .btn,
+  .section5 .btn {
     width: 100%;
   }
 
-  .section1 h2 {
+  .section1 h2,
+  .section5 h2 {
     font-size: 1.8rem;
   }
 
@@ -264,5 +342,25 @@ p {
     margin-top: 135px;
     flex-direction: column;
     gap: 65px;
+  }
+
+  .footer {
+    padding: 40px 0 45px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .links {
+    margin: 50px 0 0 0;
+    flex-direction: column;
+  }
+
+  .footer .links li {
+    text-align: center;
+  }
+
+  .footer .icons {
+    align-self: center;
+    margin: 30px 0 0 0;
   }
 }
