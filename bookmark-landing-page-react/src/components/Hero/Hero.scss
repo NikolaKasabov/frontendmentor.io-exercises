@@ -1,0 +1,66 @@
+@use "../../variables.scss";
+
+.hero {
+  margin-top: 60px;
+  padding: 0 50px 0 165px;
+  display: flex;
+
+  .hero-text {
+    .hero-title {
+      font-size: 3rem;
+    }
+
+    p {
+      margin-top: 30px;
+      max-width: 480px;
+    }
+
+    .hero-buttons-container {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .btn-firefox {
+        background-color: #f7f7f7;
+        color: variables.$text-color;
+        border-color: #f7f7f7;
+      }
+
+      .btn-firefox:hover {
+        border-color: variables.$text-color;
+        background-color: white;
+      }
+    }
+  }
+
+  .hero-image {
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: center;
+
+    .hero-text {
+      order: 2;
+      text-align: center;
+
+      .hero-title {
+        font-size: 1.9rem;
+      }
+
+      p {
+        margin: 30px auto 0 auto;
+      }
+    }
+
+    .hero-image {
+      order: 1;
+    }
+  }
+}
