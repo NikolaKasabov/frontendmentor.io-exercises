@@ -1,0 +1,10 @@
+.header {
+  padding: 45px 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media(max-width: 700px) {
+    padding: 45px 2rem;
+  }
+}

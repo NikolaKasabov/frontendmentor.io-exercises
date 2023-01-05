@@ -1,6 +1,24 @@
-body {
+@use 'variables.scss';
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Rubik', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: variables.$text-color;
+}
+
+.btn {
+  padding: 0.8rem 1.6rem;
+  background-color: variables.$primary-color;
+  font-size: 0.9rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
