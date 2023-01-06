@@ -3,5 +3,20 @@
 .App {
   max-width: 1440px;
   margin: 0 auto;
-  
+
+  .hero {
+    margin-top: 60px;
+  }
+
+  .features {
+    margin-top: 90px;
+  }
+
+
+
+  /////////////////////////////////////////////////////////
+  // background-color: #ccc;
+  border: 1px solid green;
+  padding-bottom: 200px;
+  /////////////////////////////////////////////////////////
 }

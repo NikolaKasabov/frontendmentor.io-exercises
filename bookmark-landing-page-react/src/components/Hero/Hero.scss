@@ -1,7 +1,6 @@
 @use "../../variables.scss";
 
 .hero {
-  margin-top: 60px;
   padding: 0 50px 0 165px;
   display: flex;
 
@@ -18,7 +17,6 @@
     .hero-buttons-container {
       margin-top: 35px;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       gap: 1rem;
 
@@ -56,6 +54,10 @@
 
       p {
         margin: 30px auto 0 auto;
+      }
+
+      .hero-buttons-container {
+        justify-content: center;
       }
     }
 
