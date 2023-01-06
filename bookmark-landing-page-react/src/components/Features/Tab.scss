@@ -20,4 +20,12 @@
     width: 100%;
     background-color: variables.$secondary-color;
   }
+
+  @media(max-width: 700px) {
+    &.active::before {
+      width: 140px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
