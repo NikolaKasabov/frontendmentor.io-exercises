@@ -1,0 +1,37 @@
+.extension {
+  padding: 0 2rem;
+  text-align: center;
+
+  .extension-text {
+    max-width: 540px;
+    margin: 35px auto 0 auto;
+  }
+
+  .extension-cards-container {
+    margin: 50px auto 0 auto;
+    padding-bottom: 80px;
+    max-width: 910px;
+    display: flex;
+    justify-content: space-between;
+
+    .extension-card:nth-child(2) {
+      transform: translateY(40px);
+    }
+
+    .extension-card:nth-child(3) {
+      transform: translateY(80px);
+    }
+  }
+
+  @media (max-width: 950px) {
+    .extension-cards-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 45px;
+
+      .extension-card {
+        transform: translateY(0) !important;
+      }
+    }
+  }
+}

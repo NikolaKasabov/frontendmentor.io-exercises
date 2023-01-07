@@ -1,0 +1,29 @@
+@use "../../variables.scss";
+
+.extension-card {
+  box-shadow: 0 10px 10px rgba($color: variables.$primary-color, $alpha: 0.15);
+  max-width: 280px;
+  border-radius: 10px;
+
+  .extension-card-logo {
+    margin-top: 50px;
+  }
+
+  .extension-card-title {
+    margin-top: 35px;
+  }
+
+  .extension-card-text {
+    margin-top: 18px;
+    font-size: 1rem;
+  }
+
+  .extension-card-dots {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .extension-card-btn {
+    margin: 25px;
+  }
+}
