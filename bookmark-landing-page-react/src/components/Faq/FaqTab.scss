@@ -1,0 +1,40 @@
+@use "../../variables.scss";
+
+.faq-tab {
+  padding: 23px 25px 23px 0;
+  cursor: pointer;
+  text-align: left;
+
+  .faq-tab-question-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .faq-tab-icon {
+      font-size: 2rem;
+      filter: invert(49%) sepia(44%) saturate(6332%) hue-rotate(217deg) brightness(90%) contrast(93%);
+    }
+  }
+
+  .faq-tab-answer-wrapper {
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+
+    .faq-tab-answer {
+      max-width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+  &:hover {
+    .faq-tab-question {
+      filter: invert(39%) sepia(84%) saturate(1801%) hue-rotate(333deg) brightness(114%) contrast(96%);
+    }
+  }
+
+  &.active {
+    .faq-tab-icon {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.faq {
+  padding: 0 2rem;
+  text-align: center;
+
+  p {
+    max-width: 495px;
+    margin: 30px auto 0 auto;
+  }
+
+  .faq-questions-container {
+    margin: 60px auto 0 auto;
+    max-width: 535px;
+
+    .line {
+      height: 1px;
+      background-color: #dddddd;
+    }
+  }
+
+  .faq-btn {
+    margin-top: 53px;
+  }
+}

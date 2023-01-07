@@ -18,7 +18,7 @@ const data = [
     image: firefoxLogo,
   },
   {
-    id: 0,
+    id: 2,
     title: 'Add to Opera',
     text: 'Minimum version 46',
     image: operaLogo,
