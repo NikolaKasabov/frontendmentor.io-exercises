@@ -35,6 +35,11 @@
         height: 100%;
         border: 2px solid white;
         border-radius: 5px;
+      
+        &::placeholder {
+          color: variables.$text-color-light;
+          letter-spacing: 1px;
+        }
       }
 
       .contact-icon {

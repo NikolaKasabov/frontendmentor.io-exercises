@@ -25,6 +25,7 @@ export default function Contact() {
       <form className='contact-form' onSubmit={submitHandler}>
         <div className={`contact-input-wrapper ${hasError ? 'has-error' : ''}`}>
           <input type="text" className='contact-input'
+            placeholder='Enter your email address'
             value={email}
             onChange={ev => setEmail(ev.target.value)}
           />
