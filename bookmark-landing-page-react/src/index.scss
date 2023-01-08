@@ -24,11 +24,16 @@ body {
   cursor: pointer;
   box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   font-family: inherit;
+  font-weight: 500;
 }
 
 .btn:hover {
   background-color: white;
   color: variables.$primary-color;
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
 
 p {

@@ -1,4 +1,5 @@
 import './App.scss';
+import Contact from './components/Contact/Contact';
 import Extension from './components/Extension/Extension';
 import Faq from './components/Faq/Faq';
 import Features from './components/Features/Features';
@@ -13,6 +14,7 @@ function App() {
       <Features />
       <Extension />
       <Faq />
+      <Contact />
     </div>
   );
 }
