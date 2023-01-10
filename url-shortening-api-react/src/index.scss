@@ -1,3 +1,5 @@
+@use './variables.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -14,4 +16,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.btn {
+  padding: 18px 36px;
+  background-color: variables.$primary-color;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  display: block;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }

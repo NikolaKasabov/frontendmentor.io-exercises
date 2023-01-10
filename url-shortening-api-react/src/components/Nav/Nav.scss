@@ -1,3 +1,133 @@
+@use "../../variables.scss";
+
 .nav {
-  
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    li:not(:first-child) {
+      margin-left: 30px;
+    }
+
+    .nav-login {
+      margin-left: auto !important;
+    }
+
+    .nav-line {
+      width: 100%;
+      max-width: 280px;
+      height: 1px;
+      background-color: #544a6d;
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: variables.$text-color-light;
+      font-size: 1rem;
+      font-weight: 700;
+
+      &:hover {
+        color: variables.$text-color-dark;
+      }
+
+      &.nav-sign-up {
+        padding: 9px 22px;
+        color: white;
+      }
+    }
+  }
+
+  .nav-open-btn {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    .nav-open-btn-icon {
+      font-size: 2rem;
+      color: variables.$text-color-light;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .nav-overlay.open {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      padding: 45px 22px 40px 22px;
+      position: fixed;
+      top: 95px;
+      left: 22px;
+      width: calc(100% - 44px);
+      flex-direction: column;
+      background-color: variables.$text-color-dark;
+      border-radius: 10px;
+
+      &.open {
+        display: flex;
+      }
+
+      li:not(:first-child) {
+        margin-left: 0;
+      }
+
+      .nav-login {
+        margin-left: 0 !important;
+      }
+
+      .nav-line {
+        display: block;
+      }
+
+      li:nth-child(2),
+      li:nth-child(3) {
+        margin-top: 25px;
+      }
+
+      li:last-child {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .nav-line {
+        margin: 30px 0;
+      }
+
+      a {
+        color: white;
+
+        &:hover {
+          color: variables.$text-color-light;
+        }
+      }
+
+      a.nav-sign-up {
+        margin-top: 30px;
+        width: 100%;
+        display: block;
+        text-align: center;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .nav-open-btn {
+      display: block;
+    }
+  }
 }
