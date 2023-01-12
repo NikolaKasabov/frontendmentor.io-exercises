@@ -1,0 +1,20 @@
+.boost {
+  padding: 70px 22px 55px 22px;
+  color: white;
+  background: url("../../images/bg-boost-desktop.svg"), #3a3053;
+  text-align: center;
+
+  .boost-title {
+    font-size: 2.3rem;
+  }
+
+  .boost-btn {
+    margin: 25px auto 0 auto;
+  }
+
+  @media (max-width: 750px) {
+    .boost-title {
+      font-size: 1.7rem;
+    }
+  }
+}

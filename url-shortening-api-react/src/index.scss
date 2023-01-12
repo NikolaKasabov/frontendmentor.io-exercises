@@ -1,4 +1,4 @@
-@use './variables.scss';
+@use "./variables.scss";
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 18px;
@@ -15,8 +15,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 p {
@@ -41,6 +40,6 @@ img {
   font-size: 1.3rem;
 
   &:hover {
-    opacity: 0.6;
+    background-color: variables.$btn-hover-color;
   }
 }
