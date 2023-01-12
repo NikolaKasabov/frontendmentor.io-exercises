@@ -1,0 +1,41 @@
+@use '../../variables.scss';
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
+
+  .lds-dual-ring {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+
+    &::after {
+      content: " ";
+      display: block;
+      width: 160px;
+      height: 160px;
+      margin: 8px;
+      border-radius: 50%;
+      border: 16px solid #fff;
+      border-color: variables.$primary-color transparent variables.$primary-color transparent;
+      animation: lds-dual-ring 1.2s linear infinite;
+    }
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

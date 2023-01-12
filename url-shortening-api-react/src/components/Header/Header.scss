@@ -3,7 +3,7 @@
 .header {
   max-width: variables.$container-width;
   margin: 0 auto;
-  padding: 47px 0;
+  padding: 47px 22px;
   display: flex;
   align-items: center;
   gap: 45px;
@@ -13,7 +13,7 @@
   }
 
   @media (max-width: 750px) {
-    padding: 38px 0;
+    padding: 38px 22px;
     justify-content: space-between;
 
     .nav {

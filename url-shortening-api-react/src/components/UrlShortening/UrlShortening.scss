@@ -1,0 +1,93 @@
+@use "../../variables.scss";
+
+.url-shortening {
+  margin-top: 65px;
+  padding: 0 22px;
+  background: linear-gradient(to bottom, white 0%, white 77px, #f0f1f6 77px, #f0f1f6 100%);
+
+  .url-shortening-container {
+    max-width: 1110px;
+    margin: 0 auto;
+
+    .url-shortener {
+      padding: 50px 60px;
+      background: url("../../images/bg-shorten-desktop.svg"), #3a3053;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+
+      .url-shortener-form {
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+
+        .input-wrapper {
+          flex: 1;
+          position: relative;
+
+          input {
+            padding-left: 20px;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            font-family: inherit;
+            font-size: 1.2rem;
+
+            &.error {
+              border-color: variables.$secondary-color;
+            }
+
+            &::placeholder {
+              color: rgba($color: variables.$text-color-light, $alpha: 0.6);
+            }
+
+            &.error::placeholder {
+              color: rgba($color: variables.$secondary-color, $alpha: 0.6);
+            }
+          }
+
+          .error-message {
+            position: absolute;
+            top: calc(100% + 3px);
+            left: 0;
+            color: variables.$secondary-color;
+            font-size: 1rem;
+            font-style: italic;
+          }
+        }
+
+        button {
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .shortened-urls-container {
+      margin-top: 22px;
+
+      .url-details:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    background: linear-gradient(to bottom, white 0%, white 94px, #f0f1f6 94px, #f0f1f6 100%);
+
+    .url-shortening-container {
+      .url-shortener {
+        padding: 22px;
+
+        .url-shortener-form {
+          flex-direction: column;
+          gap: 35px;
+
+          .input-wrapper {
+            flex: 0 0 55px;
+          }
+        }
+      }
+    }
+  }
+}

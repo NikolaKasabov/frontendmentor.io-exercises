@@ -1,0 +1,66 @@
+@use "../../variables.scss";
+
+.url-details {
+  padding: 15px 22px 15px 32px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+  p {
+    font-size: 1.2rem;
+    color: variables.$text-color-dark;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .line {
+    display: none;
+  }
+
+  a {
+    margin-left: auto;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: variables.$primary-color;
+  }
+
+  button {
+    margin-left: 25px;
+    padding: 0;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+
+    &.copied {
+      background-color: variables.$text-color-dark;
+    }
+  }
+
+  @media (max-width: 700px) {
+    padding: 15px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+
+    .line {
+      display: block;
+      width: calc(100% + 30px);
+      height: 1px;
+      background-color: #e5e5e5;
+      align-self: center;
+    }
+
+    a {
+      margin-left: 0;
+    }
+
+    button {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}

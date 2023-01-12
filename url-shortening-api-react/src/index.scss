@@ -11,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 18px;
+  color: variables.$text-color-dark;
 }
 
 code {
@@ -18,13 +19,25 @@ code {
     monospace;
 }
 
+p {
+  color: variables.$text-color-light;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
 .btn {
-  padding: 18px 36px;
+  padding: 12px 36px;
   background-color: variables.$primary-color;
   border-radius: 40px;
+  border: none;
   color: white;
   cursor: pointer;
   display: block;
+  font-family: inherit;
+  font-size: 1.3rem;
 
   &:hover {
     opacity: 0.6;

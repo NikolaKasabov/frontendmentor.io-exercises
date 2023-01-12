@@ -71,6 +71,7 @@
       position: fixed;
       top: 95px;
       left: 22px;
+      z-index: 20;
       width: calc(100% - 44px);
       flex-direction: column;
       background-color: variables.$text-color-dark;
