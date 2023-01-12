@@ -1,0 +1,41 @@
+.statistics-card {
+  max-width: 350px;
+
+  .statistics-card-empty-space {
+    height: 43px;
+  }
+
+  .statistics-card-content-wrapper {
+    padding: 75px 30px 40px 30px;
+    background-color: #fff;
+    text-align: left;
+    border-radius: 5px;
+    position: relative;
+
+    .icon-wrapper {
+      position: absolute;
+      top: 0;
+      left: 22px;
+      transform: translateY(-50%);
+      width: 86px;
+      height: 86px;
+      padding: 22px;
+      border-radius: 50%;
+      background-color: #3d2f53;
+    }
+
+    .statistics-card-text {
+      margin-top: 20px;
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 1150px) {
+    .statistics-card-content-wrapper {
+      .icon-wrapper {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

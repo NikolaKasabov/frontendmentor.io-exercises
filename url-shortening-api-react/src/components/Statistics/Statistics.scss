@@ -1,0 +1,71 @@
+@use "../../variables.scss";
+
+.statistics {
+  padding: 130px 22px 115px 22px;
+  background-color: #f0f1f6;
+  text-align: center;
+
+  .statistics-title {
+    font-size: 2.5rem;
+  }
+
+  .statistics-text {
+    max-width: 510px;
+    margin: 30px auto 0 auto;
+  }
+
+  .statistics-cards-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+
+    .horizontal-line {
+      width: 30px;
+      height: 8px;
+      background-color: variables.$primary-color;
+      align-self: center;
+    }
+
+    .vertical-line {
+      display: none;
+      width: 8px;
+      height: 45px;
+      background-color: variables.$primary-color;
+    }
+
+    .statistics-card:nth-of-type(4) {
+      margin-top: 40px;
+    }
+
+    .statistics-card:nth-of-type(7) {
+      margin-top: 80px;
+    }
+  }
+
+  @media (max-width: 1150px) {
+    padding-bottom: 80px;
+
+    .statistics-cards-container {
+      flex-direction: column;
+      align-items: center;
+
+      .horizontal-line {
+        display: none;
+      }
+
+      .vertical-line {
+        display: block;
+      }
+
+      .statistics-card {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  @media (max-width: 750px) {
+    .statistics-title {
+      font-size: 1.7rem;
+    }
+  }
+}
