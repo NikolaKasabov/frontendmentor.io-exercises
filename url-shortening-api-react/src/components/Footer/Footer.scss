@@ -1,0 +1,88 @@
+@use "../../variables.scss";
+
+.footer {
+  padding: 70px 22px 75px 22px;
+  background-color: #232027;
+  color: white;
+
+  .footer-wrapper {
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+
+    .footer-logo-wrapper {
+      flex: 1;
+
+      .footer-logo {
+        width: 118px;
+      }
+    }
+
+    .footer-links {
+      h4 {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      ul {
+        padding-top: 18px;
+        list-style: none;
+
+        li:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        a {
+          font-size: 0.95rem;
+          text-decoration: none;
+          color: variables.$text-color-light;
+          color: #bfbaca;
+
+          &:hover {
+            color: variables.$primary-color;
+          }
+        }
+      }
+    }
+
+    .footer-icons {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      cursor: pointer;
+
+      .footer-icon {
+        font-size: 2rem;
+
+        &.pinterest {
+          font-size: 1.6rem;
+        }
+
+        &:hover {
+          color: variables.$primary-color;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1050px) {
+    padding: 55px 22px;
+
+    .footer-wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      text-align: center;
+
+      .footer-links {
+        ul {
+          li:not(:last-child) {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+}
