@@ -74,7 +74,7 @@ function UrlShortening() {
           </form>
         </div>
 
-        <div className="shortened-urls-container">
+        <div className={`shortened-urls-container ${shortenedUrls.length > 0 ? 'has-margin' : ''}`}>
           {shortenedUrls.map(url => {
             return (
               <UrlDetails

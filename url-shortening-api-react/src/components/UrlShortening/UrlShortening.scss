@@ -64,7 +64,9 @@
     }
 
     .shortened-urls-container {
-      margin-top: 22px;
+      &.has-margin {
+        margin-top: 22px;
+      }
 
       .url-details:not(:first-child) {
         margin-top: 15px;
