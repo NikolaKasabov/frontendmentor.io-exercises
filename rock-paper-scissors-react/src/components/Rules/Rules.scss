@@ -1,0 +1,57 @@
+@use "../../variables.scss";
+
+.rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header1 header2"
+    "img img";
+  gap: 50px 0;
+
+  .rules-title {
+    font-size: 1.9rem;
+    color: variables.$primary-color;
+    text-transform: uppercase;
+    grid-area: header1;
+  }
+
+  .rules-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    grid-area: header2;
+    justify-self: end;
+  }
+
+  .rules-img {
+    grid-area: img;
+    width: 90%;
+    justify-self: center;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+      "header"
+      "img"
+      "button";
+
+    .rules-title {
+      grid-area: header;
+      justify-self: center;
+    }
+
+    .rules-btn {
+      grid-area: button;
+      justify-self: center;
+    }
+
+    .rules-img {
+      grid-area: img;
+      width: 100%;
+    }
+  }
+}

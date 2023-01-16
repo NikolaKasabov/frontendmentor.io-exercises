@@ -2,6 +2,24 @@
   max-width: 1366px;
   margin: 0 auto;
   min-height: 100vh;
+  padding: 30px;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   color: white;
+  position: relative;
+
+  .app--show-modal-btn {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    padding: 10px 35px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid #878BA6;
+    color: white;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
 }

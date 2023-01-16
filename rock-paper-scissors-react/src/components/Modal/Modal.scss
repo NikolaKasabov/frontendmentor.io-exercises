@@ -1,5 +1,7 @@
 .modal {
   color: #000;
+  position: relative;
+  z-index: 50;
 
   .modal-overlay {
     position: fixed;
@@ -9,15 +11,18 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.3);
   }
-  
+
   .modal-content {
+    padding: 32px;
     background-color: #fff;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
-
-    padding: 50px;
+    width: 90%;
+    max-width: 400px;
+    overflow-y: auto;
+    max-height: 95%;
   }
 }

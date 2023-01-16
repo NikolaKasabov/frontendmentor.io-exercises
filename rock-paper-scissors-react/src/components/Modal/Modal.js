@@ -1,11 +1,12 @@
 import './Modal.scss';
 
-function Modal({onOverlayClick}) {
+function Modal({ onOverlayClick, children }) {
   return (
     <div className="modal">
       <div className="modal-overlay" onClick={onOverlayClick}></div>
+
       <div className="modal-content">
-        3242342
+        {children}
       </div>
     </div>
   );
