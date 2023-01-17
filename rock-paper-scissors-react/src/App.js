@@ -21,7 +21,7 @@ function App() {
       )}
 
       <Header score={score} />
-
+      
       <button className='app--show-modal-btn'
         onClick={() => setShowModal(true)}
       >rules</button>

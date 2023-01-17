@@ -1,0 +1,69 @@
+.badge {
+  width: 100%;
+  height: 100%;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border-style: solid;
+  cursor: pointer;
+
+  &.big {
+    border-width: 31px;
+  }
+
+  &.medium {
+    border-width: 21px;
+  }
+
+  &.small {
+    border-width: 14px;
+  }
+
+  &.rock {
+    border-color: #dd4b4c;
+
+    &.big {
+      box-shadow: inset 0 10px rgba(0, 0, 0, 0.17), 0 10px #AD2F30;
+    }
+    &.medium {
+      box-shadow: inset 0 7px rgba(0, 0, 0, 0.17), 0 7px #AD2F30;
+    }
+    &.small {
+      box-shadow: inset 0 5px rgba(0, 0, 0, 0.17), 0 5px #AD2F30;
+    }
+  }
+
+  &.paper {
+    border-color: #506cf4;
+
+    &.big {
+      box-shadow: inset 0 10px rgba(0, 0, 0, 0.17), 0 10px #2945C3;
+    }
+    &.medium {
+      box-shadow: inset 0 7px rgba(0, 0, 0, 0.17), 0 7px #2945C3;
+    }
+    &.small {
+      box-shadow: inset 0 5px rgba(0, 0, 0, 0.17), 0 5px #2945C3;
+    }
+  }
+  
+  &.scissors {
+    border-color: #ECA517;
+
+    &.big {
+      box-shadow: inset 0 10px rgba(0, 0, 0, 0.17), 0 10px #C66C1E;
+    }
+    &.medium {
+      box-shadow: inset 0 7px rgba(0, 0, 0, 0.17), 0 7px #C66C1E;
+    }
+    &.small {
+      box-shadow: inset 0 5px rgba(0, 0, 0, 0.17), 0 5px #C66C1E;
+    }
+  }
+
+  .badge-icon {
+    width: 50%;
+  }
+}

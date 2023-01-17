@@ -22,4 +22,12 @@
     font-size: 1rem;
     letter-spacing: 2px;
   }
+
+  @media (max-width: 600px) {
+    .app--show-modal-btn {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+    }
+  }
 }
