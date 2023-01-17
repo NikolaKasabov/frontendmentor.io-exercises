@@ -3,13 +3,19 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Modal from './components/Modal/Modal';
 import Rules from './components/Rules/Rules';
+import TypeSelect from './components/TypeSelect/TypeSelect';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [score, setScore] = useState(12);
+  const [selectedType, setSelectedType] = useState(null);
 
   function closeModalHandler() {
     setShowModal(false);
+  }
+
+  function typeSelectHandler(type) {
+    setSelectedType(type);
   }
 
   return (
@@ -21,6 +27,8 @@ function App() {
       )}
 
       <Header score={score} />
+
+      <TypeSelect onTypeSelect={typeSelectHandler} />
       
       <button className='app--show-modal-btn'
         onClick={() => setShowModal(true)}

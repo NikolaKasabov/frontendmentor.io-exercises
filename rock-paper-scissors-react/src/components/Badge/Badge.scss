@@ -9,6 +9,14 @@
   border-style: solid;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
   &.big {
     border-width: 31px;
   }

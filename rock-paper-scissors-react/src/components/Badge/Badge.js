@@ -5,7 +5,7 @@ import scissors from '../../images/icon-scissors.svg';
 import { useEffect, useRef } from 'react';
 
 // type = 'rock' | 'paper' | 'scissors'
-function Badge({ type = 'rock' }) {
+function Badge({ type = 'rock', onClick }) {
   const wrapperRef = useRef(null);
 
   function resizeHandler() {
@@ -37,7 +37,7 @@ function Badge({ type = 'rock' }) {
   }, []);
 
   return (
-    <div className={`badge ${type}`} ref={wrapperRef}>
+    <div className={`badge ${type}`} ref={wrapperRef} onClick={() => onClick(type)}>
       {type === 'rock' && <img src={rock} alt="rock" className='badge-icon' />}
       {type === 'paper' && <img src={paper} alt="paper" className='badge-icon' />}
       {type === 'scissors' && <img src={scissors} alt="scissors" className='badge-icon' />}

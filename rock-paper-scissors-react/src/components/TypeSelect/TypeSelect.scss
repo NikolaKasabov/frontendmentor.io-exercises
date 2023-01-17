@@ -1,0 +1,45 @@
+.type-select {
+  padding-bottom: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .type-select--container {
+    position: relative;
+
+    .type-select--badge-wrapper {
+      position: absolute;
+      width: 192px;
+      height: 192px;
+    }
+
+    .type-select--badge-wrapper1 {
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+    .type-select--badge-wrapper2 {
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+    .type-select--badge-wrapper3 {
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .type-select--container {
+      .type-select--triangle {
+        width: 175px;
+      }
+
+      .type-select--badge-wrapper {
+        width: 128px;
+        height: 128px;
+      }
+    }
+  }
+}
