@@ -26,7 +26,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   min-height: 100vh;
-  padding-top: 77px;
+  padding: 77px 22px 50px 22px;
   background-color: #f7f7ff;
   background: no-repeat 100% 0% url("./images/bg-top.svg"), no-repeat 0% 100% url("./images/bg-bottom.svg"), #f7f7ff;
 }
@@ -128,7 +128,7 @@ h1 {
 
 .cards-container .card .line {
   height: 1px;
-  background-color: #DADADA;
+  background-color: #dadada;
 }
 
 .cards-container .card .text {
@@ -149,7 +149,7 @@ h1 {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  border: 1px solid #78779F;
+  border: 1px solid #78779f;
 }
 
 .cards-container .card .card-btn:hover {
@@ -176,7 +176,7 @@ h1 {
 }
 
 .cards-container .card.card2 .line {
-  background-color: #A7ADFB;
+  background-color: #a7adfb;
 }
 
 .cards-container .card.card2 .text {
@@ -192,4 +192,21 @@ h1 {
   background: transparent;
   color: white;
   border-color: white;
+}
+
+.cards-container .card.card3 {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .cards-container .card.card1,
+  .cards-container .card.card3 {
+    border-radius: 10px;
+  }
 }
