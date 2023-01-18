@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  position: relative;
+  background-color: #F7F7FF;
+}
+
+img {
+  max-width: 100%;
+}
+
+.bg-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bg-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
