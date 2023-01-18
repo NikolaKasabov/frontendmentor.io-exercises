@@ -4,18 +4,31 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-background: linear-gradient(135deg, #a3a8f0, #696fdd);
+  --text-color-dark: #494c5f;
+  --text-color-medium: #6d708d;
+  --text-color-light: #b3b5c6;
+  --text-color-blue: #696fdd;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color-medium);
+  text-align: center;
+}
+
+.hide {
+  display: none;
 }
 
 .container {
+  max-width: 1440px;
+  margin: 0 auto;
   min-height: 100vh;
-  position: relative;
-  background-color: #F7F7FF;
-}
-
-img {
-  max-width: 100%;
+  padding-top: 77px;
+  background-color: #f7f7ff;
+  background: no-repeat 100% 0% url("./images/bg-top.svg"), no-repeat 0% 100% url("./images/bg-bottom.svg"), #f7f7ff;
 }
 
 .bg-top {
@@ -28,4 +41,155 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.toggle-container {
+  margin-top: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  color: var(--text-color-light);
+}
+
+.toggle-container input {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.toggle-container label {
+  width: 55px;
+  height: 30px;
+  display: block;
+  border-radius: 30px;
+  background: var(--primary-background);
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-container label:hover {
+  opacity: 0.6;
+}
+
+.toggle-container label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: all 0.3s ease-out;
+}
+
+.toggle-container input:checked + label::before {
+  transform: translateX(25px);
+}
+
+.toggle-container input:focus + label {
+  outline: 2px solid var(--text-color-dark);
+}
+
+.cards-container {
+  margin-top: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container .card {
+  max-width: 350px;
+  width: 100%;
+  padding: 35px 30px 30px 30px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(163, 168, 240, 0.3);
+}
+
+.cards-container .card .price {
+  margin: 20px 0 25px 0;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-color-dark);
+}
+
+.cards-container .card .price .number {
+  font-size: 4.2rem;
+}
+
+.cards-container .card .line {
+  height: 1px;
+  background-color: #DADADA;
+}
+
+.cards-container .card .text {
+  margin: 18px 0;
+  color: #6d708d;
+}
+
+.cards-container .card .card-btn {
+  margin-top: 30px;
+  padding: 15px;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 0.8rem;
+  color: white;
+  letter-spacing: 2px;
+  background: var(--primary-background);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #78779F;
+}
+
+.cards-container .card .card-btn:hover {
+  background: white;
+  color: var(--text-color-blue);
+}
+
+.cards-container .card.card1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.cards-container .card.card2 {
+  padding: 59px 30px 54px 30px;
+  position: relative;
+  z-index: 5;
+  border-radius: 10px;
+  background: var(--primary-background);
+  color: white;
+}
+
+.cards-container .card.card2 .price {
+  color: white;
+}
+
+.cards-container .card.card2 .line {
+  background-color: #A7ADFB;
+}
+
+.cards-container .card.card2 .text {
+  color: white;
+}
+
+.cards-container .card.card2 .card-btn {
+  background: white;
+  color: var(--text-color-blue);
+}
+
+.cards-container .card.card2 .card-btn:hover {
+  background: transparent;
+  color: white;
+  border-color: white;
 }
