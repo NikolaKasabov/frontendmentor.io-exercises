@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color-dark: #2b282f;
+  --text-color-light: #7f7d80;
+}
+
 body {
   font-family: "Karla", sans-serif;
 }
@@ -15,4 +20,123 @@ h4,
 h5,
 h6 {
   font-family: "DM Serif Display", serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  max-width: 1105px;
+  margin: 0 auto;
+  padding: 0 22px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-color-light);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.header li:last-child a {
+  padding: 11px 24px;
+  display: block;
+  margin-left: 7px;
+  color: var(--text-color-dark);
+  border: 2px solid var(--text-color-dark);
+
+  width: 100%;
+}
+
+.header .nav-btn {
+  display: none;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid var(--text-color-dark);
+}
+
+.header .nav-btn i {
+  font-size: 1.2rem;
+}
+
+.header .nav-btn .fa-bars {
+  display: block;
+}
+
+.header.open .nav-btn .fa-bars {
+  display: none;
+}
+
+.header .nav-btn .fa-xmark {
+  display: none;
+}
+
+.header.open .nav-btn .fa-xmark {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .disable-scroll-on-mobile {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .header ul {
+    padding: 50px 22px 0 22px;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: no-repeat 0% 100% / 100% url('./images/bg-pattern-mobile-nav.svg'), #2b282f;
+    flex-direction: column;
+    display: none;
+  }
+
+  .header.open ul {
+    display: flex;
+    overflow-y: auto;
+  }
+
+  .header li a {
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .header li:last-child {
+    align-self: stretch;
+  }
+
+  .header li:last-child a {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    border-color: white;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .header .nav-btn {
+    display: block;
+  }
 }
