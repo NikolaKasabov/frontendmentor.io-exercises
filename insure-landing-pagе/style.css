@@ -38,7 +38,13 @@ h6 {
   font-size: 0.85rem;
   letter-spacing: 2px;
   background-color: transparent;
+  color: white;
   border: 2px solid var(--text-color-dark);
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: var(--text-color-dark);
 }
 
 /* HEADER */
@@ -72,11 +78,20 @@ h6 {
   letter-spacing: 2px;
 }
 
+.header li a:hover {
+  color: var(--text-color-dark);
+}
+
 .header li:last-child a {
   display: block;
   margin-left: 7px;
   color: var(--text-color-dark);
   width: 100%;
+}
+
+.header li:last-child a:hover {
+  background-color: var(--text-color-dark);
+  color: white;
 }
 
 .header .nav-btn {
@@ -145,7 +160,6 @@ h6 {
 
 .section1 .btn {
   margin-top: 32px;
-  color: white;
   border-color: white;
 }
 
@@ -156,7 +170,7 @@ h6 {
 
 /* SECTION 2 */
 .section2 {
-  padding: 130px 22px 100px 22px;
+  padding: 130px 22px 150px 22px;
 }
 
 .section2 .section-container {
@@ -215,9 +229,72 @@ h6 {
 }
 
 .section2 .how-we-work .btn {
-  color: white;
   border-color: white;
   flex-shrink: 0;
+}
+
+/* FOOTER */
+.footer {
+  padding: 60px 22px 65px 22px;
+  background: no-repeat 0% 0% url("./images/bg-pattern-footer-desktop.svg"), #fafafa;
+}
+
+.footer .footer-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.footer .footer-header {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.footer .icons-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer .footer-content {
+  margin-top: 45px;
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer .footer-content > * {
+  flex: 1;
+}
+
+.footer .footer-content > *:last-child {
+  flex: 0.9;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li p {
+  margin-bottom: 35px;
+  color: var(--text-color-light);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.footer li a {
+  margin-bottom: 15px;
+  display: block;
+  text-decoration: none;
+  color: var(--text-color-dark);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.footer li a:hover {
+  text-decoration: underline;
 }
 
 /* MEDIA QUERIES */
@@ -340,5 +417,23 @@ h6 {
 
   .section1 .title {
     font-size: 2.9rem;
+  }
+
+  .footer {
+    background: no-repeat 0% 0% / contain url("./images/bg-pattern-footer-mobile.svg"), #fafafa;
+  }
+
+  .footer .footer-header {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer li p {
+    margin-top: 40px;
   }
 }
