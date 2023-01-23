@@ -154,6 +154,72 @@ h6 {
   width: 100%;
 }
 
+/* SECTION 2 */
+.section2 {
+  padding: 130px 22px 100px 22px;
+}
+
+.section2 .section-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.section2 .line {
+  width: 150px;
+  height: 1px;
+  background-color: #b0a4b2;
+}
+
+.section2 .title {
+  margin-top: 70px;
+  font-size: 4.5rem;
+}
+
+.section2 .cards-container {
+  margin-top: 100px;
+  display: flex;
+  gap: 30px;
+}
+
+.section2 .cards-container > * {
+  flex: 1;
+}
+
+.section2 .card h3 {
+  margin-top: 30px;
+  font-size: 1.7rem;
+}
+
+.section2 .card p {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  color: var(--text-color-light);
+}
+
+.section2 .how-we-work {
+  margin-top: 165px;
+  padding: 70px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background: no-repeat 100% 0% / contain url("./images/bg-pattern-how-we-work-desktop.svg"), var(--primary-color);
+}
+
+.section2 .how-we-work h2 {
+  font-size: 3.4rem;
+  max-width: 480px;
+  line-height: 1;
+}
+
+.section2 .how-we-work .btn {
+  color: white;
+  border-color: white;
+  flex-shrink: 0;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1050px) {
   .section1 {
@@ -182,6 +248,47 @@ h6 {
 
   .section1 .flex-item2 {
     order: 1;
+  }
+
+  .section2 .section-container {
+    text-align: center;
+  }
+
+  .section2 .line {
+    margin: 0 auto;
+  }
+
+  .section2 .title {
+    margin-top: 45px;
+    font-size: 2.9rem;
+  }
+
+  .section2 .cards-container {
+    margin-top: 85px;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .section2 .card h3 {
+    font-size: 1.7rem;
+  }
+
+  .section2 .card p {
+    max-width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .section2 .how-we-work {
+    margin-top: 145px;
+    padding: 70px 40px;
+    flex-direction: column;
+    gap: 40px;
+    background: no-repeat 100% 0% / contain url("./images/bg-pattern-how-we-work-mobile.svg"), var(--primary-color);
+  }
+
+  .section2 .how-we-work h2 {
+    font-size: 2.4rem;
   }
 }
 
