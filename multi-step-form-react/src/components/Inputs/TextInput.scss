@@ -1,0 +1,33 @@
+@use '../../variables.scss';
+
+.text-input {
+  .text-input--label-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    .text-input--error-message {
+      color: variables.$error;
+      font-weight: 700;
+    }
+  }
+
+  .text-input--input {
+    margin-top: 8px;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid variables.$input-border-color;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: variables.$text-color-dark;
+    border-radius: 8px;
+    outline: none;
+    
+    &:focus {
+      border-color: variables.$input-border-color-focus;
+    }
+  }
+}

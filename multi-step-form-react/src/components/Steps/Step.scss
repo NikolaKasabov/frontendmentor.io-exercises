@@ -1,0 +1,43 @@
+@use '../../variables.scss';
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  text-transform: uppercase;
+
+  &.active {
+    .step--number {
+      background-color: #BEE1FD;
+      color: variables.$text-color-dark;
+      border-color: #BEE1FD;
+    }
+  }
+
+  .step--number {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+  }
+
+  .step--content {
+    h4 {
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: variables.$text-color-light-2;
+    }
+
+    p {
+      margin-top: 5px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
+}
