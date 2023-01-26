@@ -30,48 +30,45 @@ const formSteps = [
   {
     title: 'Personal info',
     text: 'Please provide your name, email address, and phone number.',
-    getComponent: (formValues, onInputChange) => (
-      <FormStep1 formValues={formValues} onInputChange={onInputChange} />
+    getComponent: (formValues, onInputChange, setActiveStep) => (
+      <FormStep1 formValues={formValues} onInputChange={onInputChange} setActiveStep={setActiveStep} />
     ),
   },
   {
     title: 'Select your plan',
     text: 'You have the option of monthly or yearly billing.',
-    getComponent: (formValues, onInputChange) => (
-      <FormStep1 formValues={formValues} onInputChange={onInputChange} />
+    getComponent: (formValues, onInputChange, setActiveStep) => (
+      <FormStep1 formValues={formValues} onInputChange={onInputChange} setActiveStep={setActiveStep} />
     ),
   },
   {
     title: 'Pick add-ons',
     text: 'Add-ons help enhance your gaming experience.',
-    getComponent: (formValues, onInputChange) => (
-      <FormStep1 formValues={formValues} onInputChange={onInputChange} />
+    getComponent: (formValues, onInputChange, setActiveStep) => (
+      <FormStep1 formValues={formValues} onInputChange={onInputChange} setActiveStep={setActiveStep} />
     ),
   },
   {
     title: 'Finishing up',
     text: 'Double-check everything looks OK before confirming.',
-    getComponent: (formValues, onInputChange) => (
-      <FormStep1 formValues={formValues} onInputChange={onInputChange} />
+    getComponent: (formValues, onInputChange, setActiveStep) => (
+      <FormStep1 formValues={formValues} onInputChange={onInputChange} setActiveStep={setActiveStep} />
     ),
   },
 ];
 
 function App() {
   const [activeStep, setActiveStep] = useState(1);
-  const [formValues, setFormValues] = useState({});
+  const [formValues, setFormValues] = useState({
+    name: '',
+    email: '',
+    phone: '',
+  });
 
   function inputChangeHandler(ev) {
     const name = ev.target.name;
     const value = ev.target.value;
-    console.log(name, value);
-
-    setFormValues(prev => (
-      {
-        ...prev,
-        [name]: value,
-      }
-    ));
+    setFormValues(prev => ({ ...prev, [name]: value }));
   }
 
   return (
@@ -82,7 +79,9 @@ function App() {
         <div className="app--form-step-container">
           <h2 className='app--form-step-title'>{formSteps[activeStep - 1].title}</h2>
           <p className='app--form-step-text'>{formSteps[activeStep - 1].text}</p>
-          {formSteps[activeStep - 1].getComponent(formValues, inputChangeHandler)}
+          <div className="app--form-step-wrapper">
+            {formSteps[activeStep - 1].getComponent(formValues, inputChangeHandler, setActiveStep)}
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,40 @@
+@use "../../variables.scss";
+
+.button-container {
+  padding: 0 25px;
+  min-width: 120px;
+  height: 46px;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+
+  &.primary {
+    background-color: variables.$text-color-dark;
+
+    &:hover {
+      background-color: #473dff;
+    }
+  }
+
+  &.secondary {
+    padding: 0;
+    background-color: transparent;
+    color: variables.$text-color-light-1;
+  
+    &:hover {
+      color: variables.$text-color-dark;
+    }
+  }
+
+  &.confirm {
+    background-color: #473dff;
+
+    &:hover {
+      background-color: #938CFE;
+    }
+  }
+}

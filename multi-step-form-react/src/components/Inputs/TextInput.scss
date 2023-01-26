@@ -1,4 +1,4 @@
-@use '../../variables.scss';
+@use "../../variables.scss";
 
 .text-input {
   .text-input--label-container {
@@ -25,9 +25,15 @@
     color: variables.$text-color-dark;
     border-radius: 8px;
     outline: none;
-    
+
     &:focus {
       border-color: variables.$input-border-color-focus;
+    }
+  }
+
+  &.error {
+    .text-input--input {
+      border-color: variables.$error;
     }
   }
 }
