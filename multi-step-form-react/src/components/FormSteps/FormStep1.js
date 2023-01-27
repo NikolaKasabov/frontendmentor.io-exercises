@@ -11,25 +11,25 @@ function FormStep1({ formValues, onInputChange, setActiveStep }) {
   });
 
   function clickNextHandler() {
-    const temp = {
+    const tempErrors = {
       name: false,
       email: false,
       phone: false,
     };
 
     if (formValues.name.trim() === '') {
-      temp.name = true;
+      tempErrors.name = true;
     }
     if (formValues.email.trim() === '') {
-      temp.email = true;
+      tempErrors.email = true;
     }
     if (formValues.phone.trim() === '') {
-      temp.phone = true;
+      tempErrors.phone = true;
     }
 
-    setErrors(temp);
+    setErrors(tempErrors);
 
-    if (!temp.name && !temp.email && !temp.phone) {
+    if (!tempErrors.name && !tempErrors.email && !tempErrors.phone) {
       setActiveStep(prev => prev + 1);
     }
   }

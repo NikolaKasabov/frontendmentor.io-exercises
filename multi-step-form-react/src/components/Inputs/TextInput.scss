@@ -26,6 +26,10 @@
     border-radius: 8px;
     outline: none;
 
+    &::placeholder {
+      color: variables.$text-color-light-1;
+    }
+
     &:focus {
       border-color: variables.$input-border-color-focus;
     }
