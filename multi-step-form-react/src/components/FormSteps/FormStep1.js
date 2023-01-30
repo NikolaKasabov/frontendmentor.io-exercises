@@ -3,28 +3,34 @@ import './FormStep1.scss';
 import Button from '../Button/Button';
 import TextInput from '../Inputs/TextInput';
 
+const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 function FormStep1({ formValues, onInputChange, setActiveStep }) {
   const [errors, setErrors] = useState({
-    name: false,
-    email: false,
-    phone: false,
+    name: '',
+    email: '',
+    phone: '',
   });
 
   function clickNextHandler() {
     const tempErrors = {
-      name: false,
-      email: false,
-      phone: false,
+      name: '',
+      email: '',
+      phone: '',
     };
 
     if (formValues.name.trim() === '') {
-      tempErrors.name = true;
+      tempErrors.name = 'This field is required';
     }
+
     if (formValues.email.trim() === '') {
-      tempErrors.email = true;
+      tempErrors.email = 'This field is required';
+    } else if (!emailRegex.test(formValues.email)) {
+      tempErrors.email = 'Enter a valid email.';
     }
+
     if (formValues.phone.trim() === '') {
-      tempErrors.phone = true;
+      tempErrors.phone = 'This field is required';
     }
 
     setErrors(tempErrors);
@@ -44,7 +50,7 @@ function FormStep1({ formValues, onInputChange, setActiveStep }) {
           placeholder='e.g. Stephen King'
           onChange={onInputChange}
           value={formValues.name}
-          hasError={errors.name}
+          error={errors.name}
         />
         <TextInput
           type='email'
@@ -53,7 +59,7 @@ function FormStep1({ formValues, onInputChange, setActiveStep }) {
           placeholder='e.g. stephenking@lorem.com'
           onChange={onInputChange}
           value={formValues.email}
-          hasError={errors.email}
+          error={errors.email}
         />
         <TextInput
           type='text'
@@ -62,7 +68,7 @@ function FormStep1({ formValues, onInputChange, setActiveStep }) {
           placeholder='e.g. +1 234 567 890'
           onChange={onInputChange}
           value={formValues.phone}
-          hasError={errors.phone}
+          error={errors.phone}
         />
       </div>
 

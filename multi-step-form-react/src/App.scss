@@ -50,4 +50,22 @@
       }
     }
   }
+
+  @media (max-width: 800px) {
+    display: block;
+    min-height: auto;
+
+    .app--container {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0;
+
+      .app--form-step-container {
+        .app--form-step-title {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
 }

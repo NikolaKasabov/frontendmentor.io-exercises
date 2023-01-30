@@ -2,14 +2,14 @@ import { nanoid } from 'nanoid';
 
 import './TextInput.scss';
 
-function TextInput({ type, name, value, placeholder, label, onChange, hasError }) {
+function TextInput({ type, name, value, placeholder, label, onChange, error }) {
   const id = nanoid();
 
   return (
-    <div className={`text-input ${hasError ? 'error' : ''}`}>
+    <div className={`text-input ${error ? 'error' : ''}`}>
       <div className="text-input--label-container">
         <label htmlFor={id} className='text-input--label'>{label}</label>
-        {hasError && <div className="text-input--error-message">This field is required</div>}
+        {error && <div className="text-input--error-message">{error}</div>}
       </div>
 
       <input id={id}

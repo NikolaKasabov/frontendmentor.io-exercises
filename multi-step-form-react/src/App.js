@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.scss';
 import FormStep1 from './components/FormSteps/FormStep1';
+import FormStep2 from './components/FormSteps/FormStep2';
 import Steps from './components/Steps/Steps';
 
 const steps = [
@@ -38,7 +39,7 @@ const formSteps = [
     title: 'Select your plan',
     text: 'You have the option of monthly or yearly billing.',
     getComponent: (formValues, onInputChange, setActiveStep) => (
-      <FormStep1 formValues={formValues} onInputChange={onInputChange} setActiveStep={setActiveStep} />
+      <FormStep2 formValues={formValues} onInputChange={onInputChange} setActiveStep={setActiveStep} />
     ),
   },
   {
@@ -58,16 +59,22 @@ const formSteps = [
 ];
 
 function App() {
-  const [activeStep, setActiveStep] = useState(1);
+  const [activeStep, setActiveStep] = useState(2);
   const [formValues, setFormValues] = useState({
     name: '',
     email: '',
     phone: '',
+    isYearly: false,
   });
 
   function inputChangeHandler(ev) {
     const name = ev.target.name;
-    const value = ev.target.value;
+    let value = ev.target.value;
+
+    if (ev.target.type === 'checkbox') {
+      value = ev.target.checked;
+    }
+    
     setFormValues(prev => ({ ...prev, [name]: value }));
   }
 

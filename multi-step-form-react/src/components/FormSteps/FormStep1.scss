@@ -16,4 +16,10 @@
       margin-left: auto;
     }
   }
+
+  @media(max-width: 800px) {
+    .form-step-1--buttons-container {
+      margin-top: 24px;
+    }
+  }
 }
