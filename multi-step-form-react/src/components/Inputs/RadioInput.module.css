@@ -1,0 +1,29 @@
+.wrapper {
+}
+
+.input {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.input:checked + label {
+  border-color: #534d93;
+  background-color: #f8f9fe;
+}
+
+.label {
+  display: block;
+  padding: 15px;
+  border: 1px solid #dbdadf;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.label:hover {
+  border-color: #534d93;
+}
+
+@media (max-width: 800px) {
+  
+}

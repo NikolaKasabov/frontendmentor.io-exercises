@@ -22,6 +22,9 @@
 
   &.secondary {
     padding: 0;
+    width: auto;
+    min-width: auto;
+    height: auto;
     background-color: transparent;
     color: variables.$text-color-light-1;
   

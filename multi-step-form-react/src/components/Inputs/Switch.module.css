@@ -1,8 +1,8 @@
 .wrapper {
-  padding: 12px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 20px;
   background-color: #F8F9FE;
   border-radius: 8px;
 }

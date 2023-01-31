@@ -1,11 +1,11 @@
 import { nanoid } from 'nanoid';
 import classes from './Switch.module.css';
 
-function Switch({name, onChange, isChecked}) {
+function Switch({name, onChange, isChecked, className}) {
   const id = nanoid();
 
   return (
-    <div className={classes.wrapper}>
+    <div className={`${classes.wrapper} ${className ? className : ''}`}>
       <input type="checkbox"
         className={classes.input}
         name={name}

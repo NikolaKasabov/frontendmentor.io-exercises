@@ -59,17 +59,20 @@ const formSteps = [
 ];
 
 function App() {
-  const [activeStep, setActiveStep] = useState(2);
+  const [activeStep, setActiveStep] = useState(1);
   const [formValues, setFormValues] = useState({
     name: '',
     email: '',
     phone: '',
+    plan: 'arcade',
     isYearly: false,
   });
 
   function inputChangeHandler(ev) {
     const name = ev.target.name;
     let value = ev.target.value;
+
+    console.log(name, value);
 
     if (ev.target.type === 'checkbox') {
       value = ev.target.checked;
