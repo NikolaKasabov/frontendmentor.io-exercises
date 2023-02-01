@@ -1,0 +1,64 @@
+.label {
+  padding: 20px 22px;
+  display: block;
+  border: 1px solid #dbdadf;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.label:hover {
+  border-color: #534d97;
+}
+
+.label.checked {
+  border-color: #534d97;
+  background-color: #f8f9fe;
+}
+
+.input {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+.textContainer {
+  margin-left: 24px;
+}
+
+.title {
+  font-size: 0.95rem;
+}
+
+.text {
+  margin-top: 5px;
+  font-size: 0.95rem;
+  color: #9699ab;
+}
+
+.price {
+  margin-left: auto;
+  color: #473dff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+@media (max-width: 800px) {
+  .label {
+    padding: 14px;
+  }
+
+  .textContainer {
+    margin-left: 16px;
+  }
+
+  .title {
+    font-size: 0.85rem;
+  }
+
+  .text,
+  .price {
+    font-size: 0.8rem;
+  }
+}

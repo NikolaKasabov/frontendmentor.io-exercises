@@ -16,7 +16,7 @@
   display: block;
   padding: 15px;
   border: 1px solid #dbdadf;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -25,5 +25,5 @@
 }
 
 @media (max-width: 800px) {
-  
+
 }

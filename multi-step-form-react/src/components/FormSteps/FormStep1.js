@@ -19,6 +19,7 @@ function FormStep1({ formValues, onInputChange, setActiveStep }) {
       phone: '',
     };
 
+    // todo
     // if (formValues.name.trim() === '') {
     //   tempErrors.name = 'This field is required';
     // }

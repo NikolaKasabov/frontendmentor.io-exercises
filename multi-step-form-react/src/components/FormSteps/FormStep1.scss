@@ -5,6 +5,7 @@
   justify-content: space-between;
 
   .form-step-1--inputs-container {
+    width: 450px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -18,6 +19,10 @@
   }
 
   @media(max-width: 800px) {
+    .form-step-1--inputs-container{
+      width: auto;
+    }
+
     .form-step-1--buttons-container {
       margin-top: 40px;
     }

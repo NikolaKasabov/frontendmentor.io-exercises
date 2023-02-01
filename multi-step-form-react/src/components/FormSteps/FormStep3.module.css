@@ -1,0 +1,29 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputsWrapper {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buttonsContainer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .inputsWrapper {
+    width: auto;
+  }
+
+  .buttonsContainer {
+    margin-top: 40px;
+  }
+}
