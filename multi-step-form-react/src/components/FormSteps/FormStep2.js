@@ -29,7 +29,7 @@ function FormStep2({ formValues, onInputChange, setActiveStep }) {
             <img src={iconArcade} alt="icon" />
             <div>
               <h3 className={classes.radioInputTitle}>Arcade</h3>
-              <p className={classes.radioInputPrice}>$9/mo</p>
+              <p className={classes.radioInputPrice}>{formValues.isYearly ? '$90/yr' : '$9/mo'}</p>
               {formValues.isYearly && <p className={classes.radioInputText}>2 months free</p>}
             </div>
           </div>
@@ -44,7 +44,7 @@ function FormStep2({ formValues, onInputChange, setActiveStep }) {
             <img src={iconAdvanced} alt="icon" />
             <div>
               <h3 className={classes.radioInputTitle}>Advanced</h3>
-              <p className={classes.radioInputPrice}>$12/mo</p>
+              <p className={classes.radioInputPrice}>{formValues.isYearly ? '$120/yr' : '$12/mo'}</p>
               {formValues.isYearly && <p className={classes.radioInputText}>2 months free</p>}
             </div>
           </div>
@@ -59,7 +59,7 @@ function FormStep2({ formValues, onInputChange, setActiveStep }) {
             <img src={iconPro} alt="icon" />
             <div>
               <h3 className={classes.radioInputTitle}>Pro</h3>
-              <p className={classes.radioInputPrice}>$15/mo</p>
+              <p className={classes.radioInputPrice}>{formValues.isYearly ? '$150/yr' : '$15/mo'}</p>
               {formValues.isYearly && <p className={classes.radioInputText}>2 months free</p>}
             </div>
           </div>

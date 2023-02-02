@@ -1,0 +1,100 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.selectedServices {
+  width: 450px;
+  padding: 20px 22px;
+  border-radius: 10px;
+  background-color: #f8f9fe;
+}
+
+.selectedServices h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.selectedServices h3 span {
+  text-transform: capitalize;
+}
+
+.changeIsYearly {
+  margin-top: 8px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #9699ab;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.changeIsYearly:hover {
+  color: #473dff;
+}
+
+.line {
+  margin-top: 25px;
+  height: 4px;
+  background: linear-gradient(to bottom, #e7e8ed 0 25%, #f9faff 25% 50%, #f6f7fc 50% 75%, #fafbff 75% 100%);
+}
+
+.addOn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.addOn p:first-child {
+  color: #9699ab;
+}
+
+.total {
+  margin-top: 30px;
+  padding: 0 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.total p:first-child {
+  color: #9699ab;
+}
+
+.total p:last-child {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #473dff;
+}
+
+.buttonsContainer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .selectedServices {
+    width: auto;
+  }
+
+  .total p:last-child {
+    font-size: 1rem;
+  }
+
+  .buttonsContainer {
+    margin-top: 40px;
+  }
+}

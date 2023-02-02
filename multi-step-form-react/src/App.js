@@ -3,6 +3,7 @@ import './App.scss';
 import FormStep1 from './components/FormSteps/FormStep1';
 import FormStep2 from './components/FormSteps/FormStep2';
 import FormStep3 from './components/FormSteps/FormStep3';
+import FormStep4 from './components/FormSteps/FormStep4';
 import Steps from './components/Steps/Steps';
 
 const steps = [
@@ -53,14 +54,18 @@ const formSteps = [
   {
     title: 'Finishing up',
     text: 'Double-check everything looks OK before confirming.',
-    getComponent: (formValues, onInputChange, setActiveStep) => (
-      <FormStep1 formValues={formValues} onInputChange={onInputChange} setActiveStep={setActiveStep} />
+    getComponent: (formValues, onInputChange, setActiveStep, setFormValues) => (
+      <FormStep4 formValues={formValues}
+        onInputChange={onInputChange}
+        setActiveStep={setActiveStep}
+        setFormValues={setFormValues}
+      />
     ),
   },
 ];
 
 function App() {
-  const [activeStep, setActiveStep] = useState(3);
+  const [activeStep, setActiveStep] = useState(4);
   const [formValues, setFormValues] = useState({
     name: '',
     email: '',
@@ -79,7 +84,7 @@ function App() {
     if (ev.target.type === 'checkbox') {
       value = ev.target.checked;
     }
-    
+
     setFormValues(prev => ({ ...prev, [name]: value }));
   }
 
@@ -92,7 +97,7 @@ function App() {
           <h2 className='app--form-step-title'>{formSteps[activeStep - 1].title}</h2>
           <p className='app--form-step-text'>{formSteps[activeStep - 1].text}</p>
           <div className="app--form-step-wrapper">
-            {formSteps[activeStep - 1].getComponent(formValues, inputChangeHandler, setActiveStep)}
+            {formSteps[activeStep - 1].getComponent(formValues, inputChangeHandler, setActiveStep, setFormValues)}
           </div>
         </div>
       </div>
