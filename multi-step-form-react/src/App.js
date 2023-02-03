@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.scss';
+import FormCompleted from './components/FormSteps/FormCompleted';
 import FormStep1 from './components/FormSteps/FormStep1';
 import FormStep2 from './components/FormSteps/FormStep2';
 import FormStep3 from './components/FormSteps/FormStep3';
@@ -65,7 +66,7 @@ const formSteps = [
 ];
 
 function App() {
-  const [activeStep, setActiveStep] = useState(4);
+  const [activeStep, setActiveStep] = useState(1);
   const [formValues, setFormValues] = useState({
     name: '',
     email: '',
@@ -94,11 +95,16 @@ function App() {
         <Steps steps={steps} activeStep={activeStep} />
 
         <div className="app--form-step-container">
-          <h2 className='app--form-step-title'>{formSteps[activeStep - 1].title}</h2>
-          <p className='app--form-step-text'>{formSteps[activeStep - 1].text}</p>
-          <div className="app--form-step-wrapper">
-            {formSteps[activeStep - 1].getComponent(formValues, inputChangeHandler, setActiveStep, setFormValues)}
-          </div>
+          {activeStep > 4
+            ? <FormCompleted />
+            : <>
+              <h2 className='app--form-step-title'>{formSteps[activeStep - 1].title}</h2>
+              <p className='app--form-step-text'>{formSteps[activeStep - 1].text}</p>
+              <div className="app--form-step-wrapper">
+                {formSteps[activeStep - 1].getComponent(formValues, inputChangeHandler, setActiveStep, setFormValues)}
+              </div>
+            </>
+          }
         </div>
       </div>
     </div>

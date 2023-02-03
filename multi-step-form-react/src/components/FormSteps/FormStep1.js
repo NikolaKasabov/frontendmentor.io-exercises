@@ -19,20 +19,19 @@ function FormStep1({ formValues, onInputChange, setActiveStep }) {
       phone: '',
     };
 
-    // todo
-    // if (formValues.name.trim() === '') {
-    //   tempErrors.name = 'This field is required';
-    // }
+    if (formValues.name.trim() === '') {
+      tempErrors.name = 'This field is required';
+    }
 
-    // if (formValues.email.trim() === '') {
-    //   tempErrors.email = 'This field is required';
-    // } else if (!emailRegex.test(formValues.email)) {
-    //   tempErrors.email = 'Enter a valid email.';
-    // }
+    if (formValues.email.trim() === '') {
+      tempErrors.email = 'This field is required';
+    } else if (!emailRegex.test(formValues.email)) {
+      tempErrors.email = 'Enter a valid email.';
+    }
 
-    // if (formValues.phone.trim() === '') {
-    //   tempErrors.phone = 'This field is required';
-    // }
+    if (formValues.phone.trim() === '') {
+      tempErrors.phone = 'This field is required';
+    }
 
     setErrors(tempErrors);
 
