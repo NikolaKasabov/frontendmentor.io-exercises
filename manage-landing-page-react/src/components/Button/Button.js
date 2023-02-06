@@ -1,9 +1,9 @@
 import classes from './Button.module.css';
 
 // type = primary | secondary
-function Button({ type, children, onClick }) {
+function Button({ type, children, onClick, className }) {
   return (
-    <button className={`${classes.wrapper} ${type ? classes[type] : ''}`}
+    <button className={`${className} ${classes.wrapper} ${type ? classes[type] : ''}`}
       onClick={onClick}
     >
       {children}

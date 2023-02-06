@@ -2,6 +2,7 @@
   --container-width: calc(1110px + 44px);
   --primary-color: #f25f3a;
   --text-color-dark: #242d52;
+  --text-color-light: #9095a7;
 }
 
 * {
