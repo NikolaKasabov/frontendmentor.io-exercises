@@ -1,0 +1,16 @@
+.wrapper {
+  padding: 53px 22px;
+  margin: 0 auto;
+  max-width: var(--container-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBtn {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  z-index: 20;
+  font-size: 1.7rem;
+}

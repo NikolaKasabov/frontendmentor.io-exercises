@@ -1,3 +1,7 @@
 .wrapper {
-  
+  margin: 0 auto;
+  max-width: 1440px;
+
+  /* todo */
+  border: 1px solid green;
 }
