@@ -1,0 +1,36 @@
+.wrapper {
+  margin-top: 35px;
+  width: 535px;
+  padding: 65px 40px 40px 40px;
+  position: relative;
+  background-color: #FAFAFA;
+  text-align: center;
+}
+
+.wrapper img {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper h4 {
+  font-size: 0.9rem;
+}
+
+.wrapper p {
+  margin-top: 22px;
+  color: var(--text-color-light);
+}
+
+.wrapper.mobile {
+  width: auto;
+  padding: 65px 30px 40px 30px;
+}
+
+.wrapper.mobile p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+}

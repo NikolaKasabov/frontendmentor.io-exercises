@@ -1,0 +1,29 @@
+.wrapper {
+  margin-top: 150px;
+  padding-bottom: 100px;
+}
+
+.title {
+  font-size: 2.3rem;
+  text-align: center;
+}
+
+.accordionWrapper {
+  margin-top: 70px;
+}
+
+.btn {
+  margin: 45px auto 0 auto;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    margin-top: 80px;
+    padding-bottom: 45px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}

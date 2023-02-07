@@ -1,0 +1,12 @@
+.wrapper {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.wrapper.active {
+  background-color: var(--primary-color);
+}

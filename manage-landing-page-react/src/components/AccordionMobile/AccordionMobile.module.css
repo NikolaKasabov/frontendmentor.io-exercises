@@ -1,0 +1,12 @@
+.cardWrapper {
+  max-width: 436px;
+  padding: 0 18px;
+  margin: 0 auto;
+}
+
+.buttonsContainer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
