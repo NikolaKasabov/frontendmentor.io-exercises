@@ -1,0 +1,31 @@
+.wrapper {
+  padding: 0 22px;
+  color: white;
+  background: var(--primary-color);
+}
+
+.innerWrapper {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  max-width: 450px;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+@media (max-width: 800px) {
+  .innerWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title {
+    margin-bottom: 25px;
+  }
+}
