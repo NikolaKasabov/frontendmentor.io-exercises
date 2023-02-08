@@ -1,14 +1,11 @@
 .wrapper {
   margin: 0 auto;
   max-width: 1440px;
-  background: no-repeat 124% 160% url("./images/bg-tablet-pattern.svg");
-
-  /* todo remove */
-  border: 1px solid green;
+  background: no-repeat 125% -12% url("./images/bg-tablet-pattern.svg");
 }
 
 @media (max-width: 1000px) {
   .wrapper {
-    background: no-repeat 70% -50% url("./images/bg-tablet-pattern.svg");
+    background: no-repeat 200% -10% url("./images/bg-tablet-pattern.svg");
   }
 }
