@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --container-width: 1110px;
+  --text-color-dark: #2d314d;
+  --text-color-light: #9698a6;
+  --primary-color: #31d35c;
+  --secondary-color: #2bb7da;
+  --bg-color-1: #fafafa;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  color: var(--text-color-dark);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.btn-primary {
+  padding: 13px 32px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+  opacity: 0.7;
+}
+
+/* HEADER */
+.header {
+  padding: 0 22px;
+}
+
+.header .inner-wrapper {
+  margin: 0 auto;
+  max-width: var(--container-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header a {
+  padding: 27px 0;
+  display: block;
+  text-decoration: none;
+  color: var(--text-color-light);
+  font-size: 1rem;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.header a:hover {
+  color: var(--text-color-dark);
+  border-bottom-color: var(--primary-color);
+}
+
+.header .nav-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.header .fa-xmark {
+  display: none;
+}
+
+.header.open .fa-bars {
+  display: none;
+}
+
+.header.open .fa-xmark {
+  display: inline;
+}
+
+/* SECTION 1 */
+.section1 {
+  background-color: var(--bg-color-1);
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding: 20px 22px;
+  }
+
+  .header .overlay {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+  }
+
+  .header.open .overlay {
+    display: block;
+  }
+
+  .header ul {
+    padding: 25px 0;
+    position: fixed;
+    top: 85px;
+    right: 22px;
+    left: 22px;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 5px;
+    display: none;
+  }
+
+  .header.open ul {
+    display: flex;
+  }
+
+  .header a {
+    padding: 0;
+    border: none;
+    color: var(--text-color-dark);
+    font-size: 1.1rem;
+  }
+
+  .header .btn-primary {
+    display: none;
+  }
+
+  .header .nav-btn {
+    display: block;
+  }
+}
