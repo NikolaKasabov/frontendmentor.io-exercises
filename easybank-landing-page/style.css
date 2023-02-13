@@ -39,9 +39,16 @@ body {
   opacity: 0.7;
 }
 
+p {
+  line-height: 1.6;
+}
+
 /* HEADER */
 .header {
   padding: 0 22px;
+  position: relative;
+  z-index: 200;
+  background-color: #fff;
 }
 
 .header .inner-wrapper {
@@ -96,7 +103,87 @@ body {
 
 /* SECTION 1 */
 .section1 {
+  padding-left: 22px;
   background-color: var(--bg-color-1);
+}
+
+.section1 .inner-wrapper {
+  margin-left: auto;
+  max-width: 1275px;
+  display: flex;
+}
+
+.section1 .item1 {
+  padding: 170px 0;
+  flex: 0 0 500px;
+}
+
+.section1 h1 {
+  max-width: 400px;
+  font-size: 3.3rem;
+  font-weight: 400;
+}
+
+.section1 p {
+  margin-top: 25px;
+  max-width: 450px;
+  color: var(--text-color-light);
+}
+
+.section1 button {
+  margin-top: 35px;
+}
+
+.section1 .item2 {
+  position: relative;
+  z-index: 100;
+  flex: 1;
+}
+
+.section1 .item2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat url("./images/bg-intro-desktop.svg");
+}
+
+.section1 .image {
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  top: -120px;
+}
+
+/* SECTION 2 */
+.section2 {
+  background-color: #f4f5f7;
+}
+
+@media (max-width: 1000px) {
+  .section1 .inner-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .section1 .item1 {
+    padding: 50px 22px 85px 0;
+    flex: auto;
+    text-align: center;
+  }
+
+  .section1 .image {
+    position: relative;
+  }
+
+  .section1 h1 {
+    max-width: none;
+    font-size: 2.4rem;
+  }
+
+  .section1 p {
+    margin: 20px auto 0 auto;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 800px) {
