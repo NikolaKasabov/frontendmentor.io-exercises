@@ -264,6 +264,80 @@ img {
   line-height: 1.4;
 }
 
+/* FOOTER */
+.footer {
+  padding: 0 22px;
+  background-color: #2d314e;
+}
+
+.footer .inner-wrapper {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 48px 0;
+  display: flex;
+}
+
+.footer .icons-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.footer .item1 {
+  flex: 3.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer .item2 {
+  flex: 2.12;
+}
+
+.footer .item3 {
+  flex: 4.65;
+}
+
+.footer .item4 {
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer .item4 p {
+  font-size: 0.9rem;
+}
+
+.footer i {
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.footer i:hover {
+  color: var(--primary-color);
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1000px) {
   .section1 .inner-wrapper {
@@ -357,5 +431,37 @@ img {
   .section3 h2 {
     font-size: 1.9rem;
     text-align: center;
+  }
+
+  .footer .inner-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .item1 {
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer .icons-wrapper {
+    gap: 16px;
+  }
+
+  .footer i {
+    font-size: 1.5rem;
+  }
+
+  .footer .item2 {
+    margin-top: 35px;
+  }
+
+  .footer .item3 {
+    margin-top: 14px;
+  }
+
+  .footer .item4 {
+    margin-top: 35px;
+    align-items: center;
+    gap: 30px;
   }
 }
