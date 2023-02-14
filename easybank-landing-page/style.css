@@ -40,7 +40,16 @@ body {
 }
 
 p {
+  font-size: 1.1rem;
+  color: var(--text-color-light);
   line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
 }
 
 /* HEADER */
@@ -121,13 +130,11 @@ p {
 .section1 h1 {
   max-width: 400px;
   font-size: 3.3rem;
-  font-weight: 400;
 }
 
 .section1 p {
   margin-top: 25px;
   max-width: 450px;
-  color: var(--text-color-light);
 }
 
 .section1 button {
@@ -158,8 +165,42 @@ p {
 /* SECTION 2 */
 .section2 {
   background-color: #f4f5f7;
+  padding: 0 22px;
 }
 
+.section2 .inner-wrapper {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 110px 0 105px 0;
+}
+
+.section2 .title {
+  font-size: 2.4rem;
+}
+
+.section2 .text {
+  margin-top: 25px;
+  max-width: 630px;
+}
+
+.section2 .cards-container {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 30px;
+}
+
+.section2 .card h4 {
+  margin-top: 35px;
+  font-size: 1.45rem;
+}
+
+.section2 .card p {
+  margin-top: 25px;
+  font-size: 1rem;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 1000px) {
   .section1 .inner-wrapper {
     flex-direction: column-reverse;
@@ -235,5 +276,17 @@ p {
 
   .header .nav-btn {
     display: block;
+  }
+
+  .section2 {
+    text-align: center;
+  }
+
+  .section2 .inner-wrapper {
+    padding: 70px 0;
+  }
+
+  .section2 .title {
+    font-size: 1.9rem;
   }
 }
