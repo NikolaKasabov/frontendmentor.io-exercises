@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #5ba4a4;
+  --secondary-color: #2c3a3a;
+  --bg-color-1: #F0FAFB;
+  --text-color-light: #7b8e8e;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  color: var(--secondary-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

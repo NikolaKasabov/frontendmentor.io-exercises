@@ -1,0 +1,22 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.main {
+  min-height: calc(100vh - 155px);
+  padding: 75px 22px 50px 22px;
+  background-color: var(--bg-color-1);
+}
+
+.main.hasFilters {
+  padding-top: 0;
+}
+
+.jobOffersContainer {
+  margin: 0 auto;
+  max-width: 1110px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}

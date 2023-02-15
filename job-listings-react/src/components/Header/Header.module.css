@@ -1,0 +1,10 @@
+.wrapper {
+  height: 155px;
+  background: no-repeat 0px 0px / cover url("../../images/bg-header-desktop.svg"), var(--primary-color);
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    background: no-repeat 0px 0px / cover url("../../images/bg-header-mobile.svg"), var(--primary-color);
+  }
+}
