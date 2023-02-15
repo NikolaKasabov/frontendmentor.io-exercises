@@ -1,7 +1,19 @@
+import AddFilterTag from '../AddFilterTag/AddFilterTag';
 import Badge from '../Badge/Badge';
 import classes from './JobOffer.module.css';
 
-function JobOffer({ logo, company, new: isNew, featured, position, postedAt, contract, location }) {
+function JobOffer({ logo, company, new: isNew, featured, position, postedAt, contract, location, role, level, languages, tools, onAddFilter }) {
+
+  function getTags() {
+    const tags = [
+      role,
+      level,
+      ...languages,
+      ...tools
+    ].filter(el => el !== '');
+
+    return tags;
+  }
 
   return (
     <article className={`${classes.wrapper} ${featured ? classes.featured : ''}`}>
@@ -21,6 +33,14 @@ function JobOffer({ logo, company, new: isNew, featured, position, postedAt, con
           <div className={classes.dot}></div>
           <div>{location}</div>
         </div>
+      </div>
+
+      <div className={classes.tagsWrapper}>
+        {getTags().map((tag, index) => (
+          <AddFilterTag key={index} onClick={() => onAddFilter(tag)}>
+            {tag}
+          </AddFilterTag>
+        ))}
       </div>
     </article>
   );

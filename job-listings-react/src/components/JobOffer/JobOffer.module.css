@@ -4,6 +4,7 @@
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   display: flex;
+  align-items: center;
   gap: 25px;
 }
 
@@ -11,10 +12,15 @@
   border-left: 5px solid var(--primary-color);
 }
 
+.wrapper > *:nth-child(1),
+.wrapper > *:nth-child(2) {
+  flex-shrink: 0;
+}
+
 .info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 12px;
 }
 
 .companyWrapper {
@@ -45,4 +51,13 @@
   height: 4px;
   border-radius: 50%;
   background-color: var(--text-color-light);
+}
+
+.tagsWrapper {
+  margin-left: auto;
+  align-self: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 15px;
 }

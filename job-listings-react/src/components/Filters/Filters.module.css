@@ -1,0 +1,30 @@
+.wrapper {
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filtersWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.clearBtn {
+  background-color: transparent;
+  border: none;
+  color: var(--text-color-light);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.clearBtn:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}

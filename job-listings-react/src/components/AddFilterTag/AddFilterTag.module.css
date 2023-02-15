@@ -1,0 +1,16 @@
+.wrapper {
+  padding: 9px;
+  background-color: var(--bg-color-1);
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wrapper:hover {
+  background-color: var(--primary-color);
+  color: white;
+}

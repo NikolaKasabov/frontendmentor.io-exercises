@@ -13,6 +13,12 @@
   padding-top: 0;
 }
 
+.filtersWrapper {
+  margin: 0 auto;
+  max-width: 1110px;
+  transform: translateY(-35px);
+}
+
 .jobOffersContainer {
   margin: 0 auto;
   max-width: 1110px;

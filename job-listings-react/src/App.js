@@ -13,6 +13,7 @@ import logo10 from './images/the-air-filter-company.svg';
 import Header from './components/Header/Header';
 import JobOffer from './components/JobOffer/JobOffer';
 import { useEffect, useState } from 'react';
+import Filters from './components/Filters/Filters';
 
 const logos = [
   logo1,
@@ -28,7 +29,7 @@ const logos = [
 ];
 
 function App() {
-  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [selectedFilters, setSelectedFilters] = useState(['Frontend', 'JavaScript']);
   const [filteredOffers, setFilteredOffers] = useState(data);
 
   useEffect(() => {
@@ -48,13 +49,48 @@ function App() {
     setFilteredOffers(temp);
   }, [selectedFilters]);
 
+  function addFilterHandler(filter) {
+    if (selectedFilters.includes(filter)) {
+      return;
+    }
+
+    setSelectedFilters(prev => {
+      return [
+        ...prev,
+        filter
+      ];
+    });
+  }
+
+  function removeFilterHandler(filter) {
+    setSelectedFilters(prev => {
+      return prev.filter(f => f !== filter);
+    });
+  }
+
+  function clearFiltersHandler() {
+    setSelectedFilters([]);
+  }
+
   return (
     <div className={classes.wrapper}>
       <Header />
-      <main className={`${classes.main} ${selectedFilters.length > 0 ? 'hasFilters' : ''}`}>
+      <main className={`${classes.main} ${selectedFilters.length > 0 ? classes.hasFilters : ''}`}>
+        {selectedFilters.length > 0 && (
+          <div className={classes.filtersWrapper}>
+            <Filters filters={selectedFilters}
+              onRemoveFilter={removeFilterHandler}
+              onClearFilters={clearFiltersHandler}
+            />
+          </div>
+        )}
         <section className={classes.jobOffersContainer}>
-          {filteredOffers.map((el, index) => (
-            <JobOffer key={el.id} {...el} logo={logos[el.id - 1]} />
+          {filteredOffers.map(el => (
+            <JobOffer key={el.id}
+              {...el}
+              logo={logos[el.id - 1]}
+              onAddFilter={addFilterHandler}
+            />
           ))}
         </section>
       </main>

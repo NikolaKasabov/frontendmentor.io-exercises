@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  /* align-items: center; */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.wrapper p {
+  padding: 9px;
+  background-color: var(--bg-color-1);
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.wrapper button {
+  width: 30px;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper button:hover {
+  background-color: var(--secondary-color);
+}
