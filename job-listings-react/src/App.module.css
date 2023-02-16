@@ -26,3 +26,17 @@
   flex-direction: column;
   gap: 25px;
 }
+
+@media (max-width: 800px) {
+  .main {
+    padding-top: 55px;
+  }
+
+  .main.hasFilters .jobOffersContainer {
+    margin-top: 20px;
+  }
+
+  .jobOffersContainer {
+    gap: 35px;
+  }
+}

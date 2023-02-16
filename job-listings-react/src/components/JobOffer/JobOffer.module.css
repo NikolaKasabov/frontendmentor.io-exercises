@@ -53,6 +53,14 @@
   background-color: var(--text-color-light);
 }
 
+.line {
+  margin: 16px 0;
+  display: none;
+  width: 100%;
+  height: 1px;
+  background-color: #bec0bf;
+}
+
 .tagsWrapper {
   margin-left: auto;
   align-self: center;
@@ -60,4 +68,42 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 15px;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    padding: 30px 16px 22px 16px;
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+    position: relative;
+  }
+
+  .logo {
+    width: 45px;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    transform: translateY(-50%);
+  }
+
+  .company,
+  .position {
+    font-size: 0.95rem;
+  }
+
+  .postedAtWrapper {
+    gap: 10px;
+    font-size: 0.95rem;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .tagsWrapper {
+    margin-left: 0;
+    align-self: start;
+    justify-content: start;
+  }
 }

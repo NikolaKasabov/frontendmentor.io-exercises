@@ -17,7 +17,7 @@ function JobOffer({ logo, company, new: isNew, featured, position, postedAt, con
 
   return (
     <article className={`${classes.wrapper} ${featured ? classes.featured : ''}`}>
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="logo" className={classes.logo} />
 
       <div className={classes.info}>
         <div className={classes.companyWrapper}>
@@ -34,6 +34,8 @@ function JobOffer({ logo, company, new: isNew, featured, position, postedAt, con
           <div>{location}</div>
         </div>
       </div>
+
+      <div className={classes.line}></div>
 
       <div className={classes.tagsWrapper}>
         {getTags().map((tag, index) => (
