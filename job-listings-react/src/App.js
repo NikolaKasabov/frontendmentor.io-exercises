@@ -29,7 +29,7 @@ const logos = [
 ];
 
 function App() {
-  const [selectedFilters, setSelectedFilters] = useState(['Frontend', 'JavaScript']);
+  const [selectedFilters, setSelectedFilters] = useState([]);
   const [filteredOffers, setFilteredOffers] = useState(data);
 
   useEffect(() => {
